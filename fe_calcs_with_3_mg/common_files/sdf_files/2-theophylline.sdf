@@ -1,0 +1,151 @@
+SML - prepared
+                    3D
+ Schrodinger Suite 2022-3.
+ 21 22  0  0  1  0            999 V2000
+    9.8693    0.2234   37.8179 C   0  0  0  0  0  0
+    9.7290    1.6679   37.5178 N   0  0  0  0  0  0
+   10.5561    2.4919   38.2769 C   0  0  0  0  0  0
+   11.3450    2.0636   39.1283 O   0  0  0  0  0  0
+   10.4367    3.8382   38.0124 N   0  0  0  0  0  0
+   11.2778    4.7774   38.7701 C   0  0  0  0  0  0
+    9.5502    4.3221   37.0580 C   0  0  0  0  0  0
+    8.7696    3.4194   36.3588 C   0  0  0  0  0  0
+    8.7980    1.9906   36.5416 C   0  0  0  0  0  0
+    8.1040    1.1789   35.9253 O   0  0  0  0  0  0
+    8.0196    4.1912   35.5132 N   0  0  0  0  0  0
+    8.3988    5.4861   35.7613 C   0  0  0  0  0  0
+    9.3223    5.5777   36.6919 N   0  0  0  0  0  0
+    9.1928   -0.4283   37.2628 H   0  0  0  0  0  0
+   10.8846   -0.1114   37.5987 H   0  0  0  0  0  0
+    9.6822    0.0342   38.8765 H   0  0  0  0  0  0
+   11.0977    5.8161   38.4922 H   0  0  0  0  0  0
+   11.0862    4.6862   39.8402 H   0  0  0  0  0  0
+   12.3347    4.5695   38.5974 H   0  0  0  0  0  0
+    7.3311    3.8696   34.8462 H   0  0  0  0  0  0
+    7.9470    6.3010   35.2144 H   0  0  0  0  0  0
+  1  2  1  0  0  0
+  1 14  1  0  0  0
+  1 15  1  0  0  0
+  1 16  1  0  0  0
+  2  3  1  0  0  0
+  2  9  1  0  0  0
+  3  4  2  0  0  0
+  3  5  1  0  0  0
+  5  6  1  0  0  0
+  5  7  1  0  0  0
+  6 17  1  0  0  0
+  6 18  1  0  0  0
+  6 19  1  0  0  0
+  7  8  2  0  0  0
+  7 13  1  0  0  0
+  8  9  1  0  0  0
+  8 11  1  0  0  0
+  9 10  2  0  0  0
+ 11 12  1  0  0  0
+ 11 20  1  0  0  0
+ 12 13  2  0  0  0
+ 12 21  1  0  0  0
+M  END
+> <s_m_entry_id>
+2
+
+> <s_m_entry_name>
+lig.1
+
+> <r_pdb_PDB_CRYST1_a>
+1
+
+> <r_pdb_PDB_CRYST1_b>
+1
+
+> <r_pdb_PDB_CRYST1_c>
+1
+
+> <r_pdb_PDB_CRYST1_alpha>
+90
+
+> <r_pdb_PDB_CRYST1_beta>
+90
+
+> <r_pdb_PDB_CRYST1_gamma>
+90
+
+> <s_pdb_PDB_CRYST1_Space_Group>
+P 1
+
+> <i_pdb_PDB_CRYST1_z>
+1
+
+> <s_pdb_PDB_format_version>
+3.0
+
+> <s_m_Source_Path>
+/Users/arasouli/Downloads
+
+> <s_m_Source_File>
+lig.pdb
+
+> <i_m_Source_File_Index>
+1
+
+> <b_ppw_prepared>
+1
+
+> <s_ppw_prepared_with_version>
+2022-3
+
+> <b_ppw_created_disulfur>
+1
+
+> <r_ppw_preprocess_pH>
+7.4
+
+> <s_ppw_het_states>
+eJzFkLEOgzAQQ38lykyj+I5A6K8g/gB164T4915SR6FDt0plwM4F+cw7PPzdrfZgcHEb3CpUpY7URJ2oMzVTFypiMy0RLRI1s7iyzabgQu12obWRbRbaxKnp1O1Ma5r5bRm1tNzTzJY6YNHSUVpHtCLVaLmxUwwxT9bg8FAjFMOYot17iXbSoDLmc3CP576/3/Wvfgrxhn9QxIWidIryhSKuFOVKEaUigkiuEFEh6qyW3ZDmtHwy3M4XV32LsA==
+
+> <r_i_Potential_Energy-S-OPLS>
+17.2405685424828
+
+> <r_i_RMS_Derivative-S-OPLS>
+0.0369280385775765
+
+> <r_i_Max_Derivative-S-OPLS>
+0.109455990116189
+
+> <r_i_Stretch_Energy-S-OPLS>
+5.1696981983976
+
+> <r_i_Bend_Energy-S-OPLS>
+9.05794656734385
+
+> <r_i_LJ-14_Energy-S-OPLS>
+20.056506438648
+
+> <r_i_El-14_Energy-S-OPLS>
+0.387400654220595
+
+> <r_i_Van_der_Waals_Energy-S-OPLS>
+-1.04198848728172
+
+> <r_i_Electrostatic_Energy-S-OPLS>
+-4.49276315534698
+
+> <r_i_Dihedral_Energy-S-OPLS>
+-11.8962325270851
+
+> <r_i_target_temperature>
+298
+
+> <s_m_job_name>
+proteinprep_1
+
+> <s_m_subgroup_title>
+proteinprep_1-out1
+
+> <s_m_subgroupid>
+proteinprep_1-out1
+
+> <b_m_subgroup_collapsed>
+0
+
+$$$$
