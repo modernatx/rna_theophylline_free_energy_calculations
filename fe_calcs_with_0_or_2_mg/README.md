@@ -1,45 +1,46 @@
-# Theophylline and its analogues Free Energy calculation #
+# Free Energy Calculations with RNA Model with Zero or Two Mg2+ ions
 
 This repository contains equilibration and alchemical free energy calculations of theophylline and its analogues.
-For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes
-large conformational changes without the bound ligand or not.
+For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes large conformational changes without the bound ligand or not.
 
 ### Directoy map ###
 
 ```
 .
-├── 2-theophylline                                      : system dir
-│   ├── 1-150KCl_Mg                                     : condition dir
-│   │   ├── 1-40winCmplx_30winLig                       : number of windows       						
-│   │   │   ├── 1-rep1									: replica dir
-│   │   │   │   └── 0-starting_PDB						: input pdb from rcsb
-│   │   │   │   └── 1-sys_prep  						: system preparation files
-│   │   │   │   └── 2-sim_run   						: simul. dir
-│   │   │   │   │   └── restraints 						: solute restraints file
-│   │   │   │   │   └── equ_0   						: intial minmization and solute restrained simul.
-│   │   │   │   │   └── equ_1   						: gradual release of the solute restraints
-│   │   │   │   │   └── equ_2   						: unrestrained 100 ns equilibration
-│   │   │   │   │   └── ini   							: pdb and psf after 100 ns equilibration to input to BFEE2
-│   │   │   │   │   └── BFEE    						: BFEE files for alchemical free enegy calc.
-│   │   │   │   │   ├── 001_MoleculeBound				: Bound state : Fwd-bwd FEP calcs
+├── 2-theophylline                                      : system directory named by ligands
+│   ├── 1-150KCl_Mg                                     : condition director (salt and Mg)
+│   │   ├── 1-40winCmplx_30winLig                       : alchemical protocol directory (number of labda windows)       						
+│   │   │   ├── 1-rep1					: replica directory
+│   │   │   │   └── 0-starting_PDB			: input PDB from RCSB database
+│   │   │   │   └── 1-sys_prep  			: system preparation files
+│   │   │   │   └── 2-sim_run   			: simulation directory
+│   │   │   │   │   └── restraints 			: solute restraints file
+│   │   │   │   │   └── equ_0   			: intial minmization and solute restrained simul.
+│   │   │   │   │   └── equ_1   			: gradual release of the solute restraints
+│   │   │   │   │   └── equ_2   			: unrestrained 100 ns equilibration
+│   │   │   │   │   └── ini   				: pdb and psf after 100 ns equilibration to input to BFEE2
+│   │   │   │   │   └── BFEE    			: BFEE files for alchemical free enegy calc.
+│   │   │   │   │   ├── 001_MoleculeBound		: bound state : Fwd-bwd FEP calcs
 │   │   │   │   │   │   └── output
-│   │   │   │   │   ├── 002_RestraintBound				: Bound state : TI for restraint contributions
+│   │   │   │   │   ├── 002_RestraintBound		: bound state : TI for restraint contributions
 │   │   │   │   │   │   └── output
-│   │   │   │   │   ├── 003_MoleculeUnbound				: Unbound state : fwd-bwd FEP calcs
+│   │   │   │   │   ├── 003_MoleculeUnbound		: unbound state : fwd-bwd FEP calcs
 │   │   │   │   │   │   └── output
-│   │   │   │   │   └── 004_RestraintUnbound			: Unbound state : TI for restraint contributions
+│   │   │   │   │   └── 004_RestraintUnbound		: unbound state : TI for restraint contributions
 │   │   │   │   │       └── output
 │   │   ├── 2-80winCmplx                                : 80 windows for ligand-bound system
-│   │   │   ├── 2-rep2									: Next replica
+│   │   │   ├── 2-rep2					: next replica
 .	.	.
 │   ├── 2-150KCl                                        : next condition
 .	.	.                                   
-├── 3-1_methylxanthine	    					        : Next system
+├── 6-xantine		  				: next system
 .	.
 .	.	.
 .	.	.	.
-├── common_files    	    					        : common files are kept here
+├── common_files    	    				: common files and scripts templates are kept here
 ```
+
+
 ### Simulated systems and conditions ##
 <!-- 2-theophylline:     Conditions: {1-150KCl_Mg, 2-150KCl, 3-55NaCl_Mg, 4-55NaCl, 5-55NaCl_bb, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb}
                     Replicas:   {1-rep1, 2-rep2, 3-rep3}
