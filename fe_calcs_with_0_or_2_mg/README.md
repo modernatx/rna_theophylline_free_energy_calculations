@@ -1,13 +1,20 @@
 # Free energy calculations with RNA model with zero or two Mg2+ ions
 
-This repository contains equilibration and alchemical free energy calculations of theophylline and its analogues.
-For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes large conformational changes without the bound ligand or not.
+This directory contains equilibration and alchemical free energy calculations of theophylline and its analogs using BFEE2 Alchemical Route.
 
-### Directoy map ###
+
+
+### Directory Map ###
+
+Directories were organized using the following structure:  `[#-ligand]/[#-condition]/[#-protocol]/[#-replicate]/`.
+eg. For example the first replicate of the simulations of theophylline with RNA aptamer with 55 mM NaCl condition and 2 structural Mg2+ ions with our default alchemical protocol can be found in this path: `2-theophylline/3-55NaCl_Mg/1-40winCmplx_30winLig/1-rep1/`.
+
+For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes large conformational changes without the bound ligand or not.
 
 ```
 .
-├── 2-theophylline                                      : system directory named by ligands
+├── 1-rna_only                                          : directory for equilibration of RNA-only system 
+├── 2-theophylline                                      : system directory for RNA-ligand complexes named by ligands
 │   ├── 1-150KCl_Mg                                     : condition director (salt and Mg)
 │   │   ├── 1-40winCmplx_30winLig                       : alchemical protocol directory (number of labda windows)       						
 │   │   │   ├── 1-rep1					: replica directory
@@ -15,16 +22,16 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
 │   │   │   │   └── 1-sys_prep  			: system preparation files
 │   │   │   │   └── 2-sim_run   			: simulation directory
 │   │   │   │   │   └── restraints 			: solute restraints file
-│   │   │   │   │   └── equ_0   			: intial minmization and solute restrained simul.
+│   │   │   │   │   └── equ_0   			: initial minmization and solute restrained simul.
 │   │   │   │   │   └── equ_1   			: gradual release of the solute restraints
 │   │   │   │   │   └── equ_2   			: unrestrained 100 ns equilibration
 │   │   │   │   │   └── ini   				: pdb and psf after 100 ns equilibration to input to BFEE2
 │   │   │   │   │   └── BFEE    			: BFEE files for alchemical free enegy calc.
-│   │   │   │   │   ├── 001_MoleculeBound		: bound state : Fwd-bwd FEP calcs
+│   │   │   │   │   ├── 001_MoleculeBound		: bound state : Forward-backward FEP calculations
 │   │   │   │   │   │   └── output
 │   │   │   │   │   ├── 002_RestraintBound		: bound state : TI for restraint contributions
 │   │   │   │   │   │   └── output
-│   │   │   │   │   ├── 003_MoleculeUnbound		: unbound state : fwd-bwd FEP calcs
+│   │   │   │   │   ├── 003_MoleculeUnbound		: unbound state : forward-backward FEP calculations
 │   │   │   │   │   │   └── output
 │   │   │   │   │   └── 004_RestraintUnbound		: unbound state : TI for restraint contributions
 │   │   │   │   │       └── output
@@ -34,9 +41,10 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
 │   ├── 2-150KCl                                        : next condition
 .	.	.                                   
 ├── 6-xantine                                           : next system with a different ligand
-.
-├── common_files    	    				     : common files and scripts templates are kept here
-├── analysis    	    				         : analysis of free energy calculations
+.	.	.    
+├── 8-rna_RMSD_colvar_contr            : RNA only system for calculating contributions of RNA backbone restraints
+├── common_files                       : common files and script templates are kept here
+├── analysis                           : analysis of free energy calculations
 │   ├── BFE_pandas                     : analysis of binding free energy predictions vs experiment
 │   │   ├── analysis.ipynb             : calculate final estimates and plot predicted vs experimental free energies
 │   ├── RDF                            : analysis of monovalent cation distribution
@@ -62,14 +70,17 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
                     Replicas:   {1-rep1, 2-rep2, 3-rep3} -->
 
 
-| System                                                                          | Simulated conditions | # replicas | RNA-ligand system # windows | ligand-only system # windows |
-| :----:                                                                          |    :----:            |   :----:   |    :----:                   |    :----:                    |    
-|theophylline, xanthine, caffein                                                  | 1-7                  |      3     | 40, even spacing            |  30, even spacing            |
-|theophylline, 1_methylxanthine, 3_methylxanthine, hypoxanthine, xanthine, caffein| 1                    |      3     | 80, even spacing            |  N/A                         | 
-|theophylline, xanthine, caffein                                                  | 4                    |      3     | 40, uneven spacing          |  N/A                         | 
-|1_methylxanthine, 3_methylxanthine, hypoxanthine                                 | 1, 3, 4, 6           |      3     | 40, even spacing            |  30, even spacing            |
+### Ligands ###
+| Directory Name      | Ligand                | Binding pose source                        | Charge   | 
+| :----:              |    :----:             |    :----:                                    |  :----:    |
+| 2-theophylline       | theophylline         | NMR structure of the complex                 | 0 |                                    
+| 3-1_methylxanthine  | 1-methyl xanthine             | Align to theophylline binding pose           | 0 |
+| 4-3_methylxanthine  | 3_methylxanthine              | Align to theophylline binding pose          | 0 |
+| 5-hypoxanthine      | hypoxanthine                  | Align to theophylline binding pose   | 0 |
+| 6-xanthine          | xanthine                     | Align to theophylline binding pose     | 0 |
+| 7-caffeine           | caffeine                     | Align to theophylline binding pose     | 0 ||
 
-### Conditions ##
+### Conditions ###
 | Syntax              | Salt condition                | Positional restraints                        |
 | :----:              |    :----:                     |    :----:                                    |
 | 1-150KCl_Mg         | 150 mM KCl, 2 Mg<sup>2+*</sup>|                     -                        |                                     
@@ -81,6 +92,16 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
 |7-55NaCl_Mg_postEq_bb| 55 mM KCl, 2 Mg<sup>2+*</sup> |RNA backbone, ref: last frame of step: 000_eq |
 
 <sup>*</sup>coordinating w/ (residue: 22-24) & (residues: 14-16)
+
+### Exploration of alchemical protocols ###
+
+| System                                                                          | Simulated conditions | # replicas | RNA-ligand system # windows | ligand-only system # windows |
+| :----:                                                                          |    :----:            |   :----:   |    :----:                   |    :----:                    |    
+|theophylline, xanthine, caffein                                                  | 1-7                  |      3     | 40, even spacing            |  30, even spacing            |
+|theophylline, 1_methylxanthine, 3_methylxanthine, hypoxanthine, xanthine, caffein| 1                    |      3     | 80, even spacing            |  N/A                         | 
+|theophylline, xanthine, caffein                                                  | 4                    |      3     | 40, uneven spacing          |  N/A                         | 
+|1_methylxanthine, 3_methylxanthine, hypoxanthine                                 | 1, 3, 4, 6           |      3     | 40, even spacing            |  30, even spacing            
+
 
 ### System set up ###
 Neccessary files for initial system prepartion can be found in "1-sys_prep" directory for each system.
@@ -153,88 +174,90 @@ In these tests, only complex (ligand-bound) system is tested for both steps 1 an
 ### Benchmark ###
 For complex (RNA-small molecul) system with 40 windows (1 ns/win):
 
-    1. p3.2xlarge   3 CPUs      ~ 2 days, 15 hr
-    2. g5.4xlarge   6 CPUs      ~ 1 day,  7  hr
+    1. p3.2xlarge   1 GPU    3 CPUs      ~ 2 days, 15 hr
+    2. g5.4xlarge   1 GPU    6 CPUs      ~ 1 day,  7  hr
 
 
 ### Analysis ###
-To get the results from BFEE2 use:
-`conda activate bfee`
-`python post_treatment_pandas_failed_rep.py`
 
-Note: For doubling the sampling with 80 windows, change the following the in the BFEE2 analysis scripts:\\
-`vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/third_party/py_bar.py`\\
-go to line 170 and change the following lines:\\
-`170         for i in range(len(forward_data[0])):
-171             for j in range(len(backward_data[0])):
-172                 if forward_data[0][i][0] == backward_data[0][j][1] and \
-173                     forward_data[0][i][1] == backward_data[0][j][0]:
-174                     merged_data.append((forward_data[1][i], backward_data[1][j]))
-175                     break
-176             else:
-177                 raise RuntimeError('Error! the forward and backward files do not match!')`\\
-to this:\\
-`170         for i in range(len(forward_data[0])):
-171             for j in range(len(backward_data[0])):
-172                 if ( forward_data[0][i][0] - backward_data[0][j][1] < 1E-5) and \
-173                     ( forward_data[0][i][1] - backward_data[0][j][0]< 1E-5 ):
-174                     merged_data.append((forward_data[1][i], backward_data[1][j]))
-175                     break
-176             else:
-177                 raise RuntimeError('Error! the forward and backward files do not match!')`\\
 
-For RMSD backbone restraints analysis do the following change:\\
-`vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/postTreatment.py`\\
-Go to line 348:\\
-change the following lines:\\
-`348         if rigidLigand:
-349             numCVs = 6
+To get the results from BFEE2 use:  
+`conda activate bfee`  
+`python post_treatment_pandas_failed_rep.py`  
+
+Note: For doubling the sampling with 80 windows, change the following the in the BFEE2 analysis scripts:\\  
+`vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/third_party/py_bar.py`\\   
+go to line 170 and change the following lines:\\  
+`170         for i in range(len(forward_data[0])):  
+171             for j in range(len(backward_data[0])):  
+172                 if forward_data[0][i][0] == backward_data[0][j][1] and \  
+173                     forward_data[0][i][1] == backward_data[0][j][0]:  
+174                     merged_data.append((forward_data[1][i], backward_data[1][j]))  
+175                     break  
+176             else:  
+177                 raise RuntimeError('Error! the forward and backward files do not match!')`\\  
+to this:\\  
+`170         for i in range(len(forward_data[0])):  
+171             for j in range(len(backward_data[0])):  
+172                 if ( forward_data[0][i][0] - backward_data[0][j][1] < 1E-5) and \  
+173                     ( forward_data[0][i][1] - backward_data[0][j][0]< 1E-5 ):  
+174                     merged_data.append((forward_data[1][i], backward_data[1][j]))  
+175                     break  
+176             else:  
+177                 raise RuntimeError('Error! the forward and backward files do not match!')`\\  
+
+For RMSD backbone restraints analysis do the following change:\\  
+`vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/postTreatment.py`\\  
+Go to line 348:\\  
+change the following lines:\\   
+`348         if rigidLigand:  
+349             numCVs = 6  
 350         else:
-351             numCVs = 7`\\
+351             numCVs = 7`\\  
 to:\\
-`348         if rigidLigand:
-349             numCVs = 6
-350         else:
-351             numCVs = 8`\\
+`348         if rigidLigand:  
+349             numCVs = 6  
+350         else:  
+351             numCVs = 8`\\  
 
-RMSD analysis steps:
-Run `run_analysis.sh` in the main direcotry:
-`bash run_analysis.sh`
-For plotting each condition in a figure with subplots, run the jupyter notebook `plot_rmsd_subplot.ipynb`, in the main direcotry.
+RMSD analysis steps:  
+Run `run_analysis.sh` in the main direcotry:  
+`bash run_analysis.sh`  
+For plotting each condition in a figure with subplots, run the jupyter notebook `plot_rmsd_subplot.ipynb`, in the main direcotry.  
 
 
-Rgyr analysis steps:
-Run `run_rgyr.sh` in the main direcotry:
-`bash run_rgyr.sh`
-For plotting each condition in a figure with subplots, run the jupyter notebook `plot_rgyr.ipynb`, in the main direcotry.
+Rgyr analysis steps:  
+Run `run_rgyr.sh` in the main direcotry:  
+`bash run_rgyr.sh`  
+For plotting each condition in a figure with subplots, run the jupyter notebook `plot_rgyr.ipynb`, in the main direcotry.  
 
-Ion density analysis steps:
-Run `run_ion_density.tcl` in the main direcotry:
-`bash run_ion_density.tcl`
-Then go to where densities are saved:
-`cd results/ion_density_scaled`
-and run `avg_density.tcl` to get the average densities:
-`vmd -dispdev text -e avg_density.tcl`
+Ion density analysis steps:  
+Run `run_ion_density.tcl` in the main direcotry:  
+`bash run_ion_density.tcl`  
+Then go to where densities are saved:  
+`cd results/ion_density_scaled`  
+and run `avg_density.tcl` to get the average densities:  
+`vmd -dispdev text -e avg_density.tcl`  
 
-RDF analysis steps:
-Method 1, using VMD:
-`cd analysis/RDF`
-Run `VMD_RDF.tcl`
-`vmd -dispdev text -e VMD_RDF.tcl`
-`cd vmd_rdfs`
-For plotting run the jupyter notebook `plot_vmd_rdf.ipynb`, in the main direcotry.
+RDF analysis steps:  
+Method 1, using VMD:  
+`cd analysis/RDF`  
+Run `VMD_RDF.tcl`  
+`vmd -dispdev text -e VMD_RDF.tcl`  
+`cd vmd_rdfs`  
+For plotting run the jupyter notebook `plot_vmd_rdf.ipynb`, in the main direcotry.  
 
-Method 2, using MDanalysis:
-Run the jupyter notebook `RDF_InterRDF.ipynb` found in:
-`cd analysis/RDF`
+Method 2, using MDanalysis:  
+Run the jupyter notebook `RDF_InterRDF.ipynb` found in:  
+`cd analysis/RDF`  
 
-KL divergence analysis of the fwd bwd overlaps:
-Run `run_parsefep_du_plot.sh` in the main direcotry:
-`bash run_parsefep_du_plot.sh`
-To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main direcotry.
+KL divergence analysis of the fwd bwd overlaps:  
+Run `run_parsefep_du_plot.sh` in the main direcotry:  
+`bash run_parsefep_du_plot.sh`  
+To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main direcotry.  
 
-### Conda environments ###
-You can find the environment requirement files in: `/cond_envs`
+### Conda environments ###  
+You can find the environment requirement files in: `/cond_envs`  
 
 
 
