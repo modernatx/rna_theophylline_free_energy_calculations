@@ -2,6 +2,9 @@
 
 This directory contains equilibration and alchemical free energy calculations of theophylline and its analogs using BFEE2 Alchemical Route.
 
+We performed free energy calculations for all six ligands mentioned in the manuscript, however only directories of theopylline and xanthine are provided in this repository as examples (`2-theophylline/` and `6-xanthine/`). The setup of calculations of other analogs was exactly the same as the steps for xanthine. 
+
+All free energy calculations were run as three independent replicates. Here, we provided the input files and scripts for only the first replicate (`1-rep1/`) to limit repository size. The other replicates were originally organized under separate directories in the same location (`2-rep2/` and `3-rep3/`).
 
 
 ### Directory Map ###
@@ -9,7 +12,7 @@ This directory contains equilibration and alchemical free energy calculations of
 Directories were organized using the following structure:  `[#-ligand]/[#-condition]/[#-protocol]/[#-replicate]/`.
 eg. For example the first replicate of the simulations of theophylline with RNA aptamer with 55 mM NaCl condition and 2 structural Mg2+ ions with our default alchemical protocol can be found in this path: `2-theophylline/3-55NaCl_Mg/1-40winCmplx_30winLig/1-rep1/`.
 
-For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes large conformational changes without the bound ligand or not.
+For the "1-rna_only" system, only the equilibration was done to check if the RNA undergoes large conformational changes without the bound ligand or not.
 
 ```
 .
@@ -40,7 +43,7 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
 .	.	.
 │   ├── 2-150KCl                                        : next condition
 .	.	.                                   
-├── 6-xantine                                           : next system with a different ligand
+├── 6-xanthine                                           : next system with a different ligand
 .	.	.    
 ├── 8-rna_RMSD_colvar_contr            : RNA only system for calculating contributions of RNA backbone restraints
 ├── common_files                       : common files and script templates are kept here
