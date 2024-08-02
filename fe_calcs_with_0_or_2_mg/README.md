@@ -86,18 +86,18 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 | 7-caffeine           | caffeine                     | Align to theophylline binding pose     | 0 ||
 
 ### Conditions ###
-| Directory Name              | Salt condition                | Positional restraints                        |
-| :----:              |    :----:                     |    :----:                                    |
-| 1-150KCl_Mg         | 150 mM KCl, 2 Mg<sup>2+*</sup>|                     -                        |                                     
-| 2-150KCl            | 150 mM KCl                    |                     -                        | 
-| 3-55NaCl_Mg         | 55 mM NaCl, 2 Mg<sup>2+*</sup> |                     -                        |
-| 4-55NaCl            | 55 mM NaCl                     |                     -                        |
-| 5-55NaCl_bb         | 55 mM NaCl                     |RNA backbone, ref: initial pdb positions      |
-|6-55NaCl_Mg_bb       | 55 mM NaCl, 2 Mg<sup>2+*</sup> |RNA backbone, ref: initial pdb positions      |
-|7-55NaCl_Mg_postEq_bb| 55 mM NaCl, 2 Mg<sup>2+*</sup> |RNA backbone, ref: last frame of step: 000_eq |
-|8-55NaCl_Mg_bb_colvar|55 mM NaCl, 2 Mg<sup>2+*</sup> | RNA backbone, ref: initial pdb positions      |
-|9-55NaCl_bb_colvar   |55 mM NaCl                     | RNA backbone, ref: initial pdb positions      |
-|10-55KCl_Mg          |55 mM KCl, 2 Mg<sup>2+*</sup>  | RNA backbone, ref: initial pdb positions      |
+| Directory Name              | Salt condition                | Structural Mg<sup>2+*</sup> ion               | Positional restraints                        |
+| :----:              |    :----:                     |    :----:                     |    :----:                                    |
+| 1-150KCl_Mg         | 150 mM KCl | 2 Mg<sup>2+*</sup>|                     -                        |                                     
+| 2-150KCl            | 150 mM KCl | None                   |                     -                        | 
+| 3-55NaCl_Mg         | 55 mM NaCl | 2 Mg<sup>2+*</sup> |                     -                        |
+| 4-55NaCl            | 55 mM NaCl  | None                   |                     -                        |
+| 5-55NaCl_bb         | 55 mM NaCl | None                    |RNA backbone, ref: initial pdb positions      |
+|6-55NaCl_Mg_bb       | 55 mM NaCl| 2 Mg<sup>2+*</sup> |RNA backbone, ref: initial pdb positions      |
+|7-55NaCl_Mg_postEq_bb| 55 mM NaCl| 2 Mg<sup>2+*</sup> |RNA backbone, ref: last frame of step: 000_eq |
+|8-55NaCl_Mg_bb_colvar|55 mM NaCl| 2 Mg<sup>2+*</sup> | RNA backbone, ref: initial pdb positions      |
+|9-55NaCl_bb_colvar   |55 mM NaCl  | None                | RNA backbone, ref: initial pdb positions      |
+|10-55KCl_Mg          |55 mM KCl| 2 Mg<sup>2+*</sup>  | RNA backbone, ref: initial pdb positions      |
 
 <sup>*</sup>coordinating w/ (residue: 22-24) & (residues: 14-16)
 
