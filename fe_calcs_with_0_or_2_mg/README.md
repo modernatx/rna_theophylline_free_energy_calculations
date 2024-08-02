@@ -86,7 +86,7 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 | 7-caffeine           | caffeine                     | Align to theophylline binding pose     | 0 ||
 
 ### Conditions ###
-| Syntax              | Salt condition                | Positional restraints                        |
+| Directory Name              | Salt condition                | Positional restraints                        |
 | :----:              |    :----:                     |    :----:                                    |
 | 1-150KCl_Mg         | 150 mM KCl, 2 Mg<sup>2+*</sup>|                     -                        |                                     
 | 2-150KCl            | 150 mM KCl                    |                     -                        | 
