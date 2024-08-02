@@ -1,4 +1,4 @@
-# Free Energy Calculations with RNA Model with Zero or Two Mg2+ ions
+# Free energy calculations with RNA model with zero or two Mg2+ ions
 
 This repository contains equilibration and alchemical free energy calculations of theophylline and its analogues.
 For the "1-rna_only" system, only equilibration is done, to check if the RNA undergoes large conformational changes without the bound ligand or not.
@@ -33,11 +33,17 @@ For the "1-rna_only" system, only equilibration is done, to check if the RNA und
 .	.	.
 │   ├── 2-150KCl                                        : next condition
 .	.	.                                   
-├── 6-xantine		  				: next system
-.	.
-.	.	.
-.	.	.	.
-├── common_files    	    				: common files and scripts templates are kept here
+├── 6-xantine                                           : next system with a different ligand
+.
+├── common_files    	    				     : common files and scripts templates are kept here
+├── analysis    	    				         : analysis of free energy calculations
+│   ├── BFE_pandas                     : analysis of binding free energy predictions vs experiment
+│   │   ├── analysis.ipynb             : calculate final estimates and plot predicted vs experimental free energies
+│   ├── RDF                            : analysis of monovalent cation distribution
+├── results                            : common files and scripts templates are kept here
+│   ├── BFE_with_failed                : BFEE free energy results after removal of rejected replicates
+│   ├── accept_reject_files            : Paths to free energy calculations of accepted and rejected replicates
+│   ├── dU_plot                        : plotting prob. dist. function overlap of potential-energy differences (DeltaU)
 ```
 
 
@@ -227,13 +233,9 @@ Run `run_parsefep_du_plot.sh` in the main direcotry:
 `bash run_parsefep_du_plot.sh`
 To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main direcotry.
 
-### Conda requirement files ###
-You can find the requirement fils in: `results/cond_envs`
 
 
-### new repo for sytems containg 3 Mg<sup>2+*</sup> ions ###
-https://bitbucket.org/modernatx/3_mg_rna_small_molecule_fe/src/master/
 
-### Contributors ###
-Co-op: Ali Rasouli (ali.rasouli28@gmail.com)
-Managers: Mehtap Isik, Frank Pickard
+
+
+
