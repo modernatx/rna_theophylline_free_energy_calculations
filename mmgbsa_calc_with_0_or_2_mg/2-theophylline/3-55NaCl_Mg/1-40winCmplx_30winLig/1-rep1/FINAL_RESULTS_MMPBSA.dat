@@ -1,0 +1,143 @@
+| Run on Thu Jun 22 13:47:39 2023
+|
+|Input file:
+|--------------------------------------------------------------
+|#sample input file for running mmgbsa with normal mode analysis
+| &general
+|   startframe=0,
+|   endframe=100,
+|   interval=100,
+|   verbose=1, 
+|/
+|&gb
+|  saltcon=0.15, igb=1
+|/
+|&nmode
+|   nmstartframe=0, nmendframe=100,
+|   nminterval=1, nmode_igb=1, nmode_istrng=0.15
+|/
+|
+|
+|--------------------------------------------------------------
+|MMPBSA.py Version=14.0
+|Solvated complex topology file:  box.prmtop
+|Complex topology file:           dry.box.prmtop
+|Receptor topology file:          rna.box.prmtop
+|Ligand topology file:            lig.box.prmtop
+|Initial mdcrd(s):                equ.0_stride100_loos_centered_vmdout.dcd
+|
+|Receptor mask:                  ":1-33"
+|Ligand mask:                    ":34"
+|Ligand residue name is "SML"
+|
+|Calculations performed using 2.0 complex frames.
+|NMODE calculations performed using 2.0 frames.
+|
+|Generalized Born ESURF calculated using 'LCPO' surface areas
+|
+|All units are reported in kcal/mole.
+|All entropy results have units kcal/mol (Temperature is 298.15 K).
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+ENTROPY RESULTS (HARMONIC APPROXIMATION) CALCULATED WITH NMODE:
+
+Complex:
+Entropy Term                Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+Translational               15.9898                0.0000              0.0000
+Rotational                  16.0792                0.0000              0.0000
+Vibrational                855.3268                0.0000              0.0000
+Total                      887.3958                0.0000              0.0000
+
+Receptor:
+Entropy Term                Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+Translational               15.9749                0.0000              0.0000
+Rotational                  16.0452                0.0000              0.0000
+Vibrational                839.7547                0.0000              0.0000
+Total                      871.7745                0.0000              0.0000
+
+Ligand:
+Entropy Term                Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+Translational               12.3568                0.0000              0.0000
+Rotational                   9.1687                0.0000              0.0000
+Vibrational                  9.5849                0.0000              0.0000
+Total                       31.1105                0.0000              0.0000
+
+Differences (Complex - Receptor - Ligand):
+Entropy Term                Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+Translational              -12.3419                0.0000              0.0000
+Rotational                  -9.1347                0.0000              0.0000
+Vibrational                  5.9872                0.0000              0.0000
+
+DELTA S total=             -15.4892                0.0000              0.0000
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+GENERALIZED BORN:
+
+Complex:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                   -672.8518                0.0000              0.0000
+EEL                       8182.2291                0.0000              0.0000
+EGB                     -12387.9908                0.0000              0.0000
+ESURF                       42.2579                0.0000              0.0000
+
+G gas                     7509.3773                0.0000              0.0000
+G solv                  -12345.7329                0.0000              0.0000
+
+TOTAL                    -4836.3556                0.0000              0.0000
+
+
+Receptor:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                   -643.7640                0.0000              0.0000
+EEL                       8188.1331                0.0000              0.0000
+EGB                     -12406.5550                0.0000              0.0000
+ESURF                       42.2089                0.0000              0.0000
+
+G gas                     7544.3691                0.0000              0.0000
+G solv                  -12364.3461                0.0000              0.0000
+
+TOTAL                    -4819.9770                0.0000              0.0000
+
+
+Ligand:
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                     -1.0853                0.0000              0.0000
+EEL                         32.9293                0.0000              0.0000
+EGB                        -21.8954                0.0000              0.0000
+ESURF                        1.8876                0.0000              0.0000
+
+G gas                       31.8440                0.0000              0.0000
+G solv                     -20.0078                0.0000              0.0000
+
+TOTAL                       11.8362                0.0000              0.0000
+
+
+Differences (Complex - Receptor - Ligand):
+Energy Component            Average              Std. Dev.   Std. Err. of Mean
+-------------------------------------------------------------------------------
+VDWAALS                    -28.0025                0.0000              0.0000
+EEL                        -38.8333                0.0000              0.0000
+EGB                         40.4596                0.0000              0.0000
+ESURF                       -1.8386                0.0000              0.0000
+
+DELTA G gas                -66.8358                0.0000              0.0000
+DELTA G solv                38.6210                0.0000              0.0000
+
+DELTA TOTAL                -28.2148                0.0000              0.0000
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Using Normal Mode Entropy Approximation: DELTA G binding =     -12.7256 +/-  0.0000
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

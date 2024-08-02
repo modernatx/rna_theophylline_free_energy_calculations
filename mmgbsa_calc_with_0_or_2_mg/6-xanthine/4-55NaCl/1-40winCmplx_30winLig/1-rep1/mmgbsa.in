@@ -1,0 +1,16 @@
+#sample input file for running mmgbsa with normal mode analysis
+ &general
+   startframe=0,
+   endframe=100,
+   interval=100,
+   verbose=1, 
+/
+&gb
+  saltcon=0.15, igb=1
+/
+&nmode
+   nmstartframe=0, nmendframe=100,
+   nminterval=1, nmode_igb=1, nmode_istrng=0.15
+/
+
+

@@ -1,0 +1,11 @@
+###########################
+# CPPTRAJ input file to create the topologies for MM-GBSA calculations.
+# To run: 
+# cpptraj -i strip_cpptraj_dry.in
+
+
+# Create the dry topology
+parm box.prmtop
+trajin equ.0_stride100_loos_centered_vmdout.mdcrd  
+strip :WAT,Cl-,Na+,MG outprefix dry nobox
+trajout dry nobox

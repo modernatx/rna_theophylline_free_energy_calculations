@@ -1,0 +1,13 @@
+###########################
+# CPPTRAJ input file to create the topologies for MM-GBSA calculations.
+# To run: 
+# cpptraj -i strip_cpptraj_rna.in
+
+
+# Create the rna topology
+parm box.prmtop
+trajin equ.0_stride100_loos_centered_vmdout.mdcrd  
+strip :WAT,Cl-,Na+,MG nobox 
+strip :SML outprefix rna nobox
+trajout rna nobox
+
