@@ -1,0 +1,227 @@
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/prep to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/lib to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/parm to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/cmd to search path.
+-f: Source tleap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap.in
+----- Source: /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.gaff2
+----- Source of /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.11, May 2016)
+----- Source: /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /opt/install/conda/envs/ambertools/dat/leap/lib/atomic_ions.lib
+Loading library: /opt/install/conda/envs/ambertools/dat/leap/lib/solvents.lib
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+----- Source: /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.RNA.OL3
+----- Source of /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.RNA.OL3 done
+Log file: ./leap.log
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading library: /opt/install/conda/envs/ambertools/dat/leap/lib/RNA.lib
+Loading Mol2 file: ./lig.gaff2.mol2
+Reading MOLECULE named SML
+ Creating SML.lib
+Building topology.
+Building atom parameters.
+Loading parameters: ./lig.gaff2.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading library: ./SML.lib
+Loading PDB file: ./rna_noH.pdb
+  total atoms in file: 704
+  Leap added 361 missing atoms according to residue templates:
+       361 H / lone pairs
+Loading PDB file: ./sqm.pdb
+  total atoms in file: 15
+Box dimensions:  42.031000 25.706411 36.349636
+  Solute vdw bounding box:              66.000 66.000 66.000
+  Total bounding box for atom centers:  66.000 66.000 66.000
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   69.483 69.494 69.001 angstroms.
+  Volume: 333184.273 A^3 
+  Total mass 161877.734 amu,  Density 0.807 g/cc
+  Added 8389 residues.
+32 K+ ions required to neutralize.
+Adding 32 counter ions to "mybox" using 1A grid
+Grid extends from solute vdw + 5.47  to  11.57
+Resolution:      1.00 Angstrom.
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.27, 3.35, -11.95).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-9.62, -4.19, 17.82).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.06, -10.56, -7.63).
+(Replacing solvent molecule)
+Placed K+ in mybox at (16.93, 8.11, -3.67).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-3.20, 12.97, -5.20).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-15.91, 4.29, 15.24).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.74, -14.73, 1.77).
+(Replacing solvent molecule)
+Placed K+ in mybox at (9.91, 17.71, 2.77).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-5.80, -1.82, -12.28).
+(Replacing solvent molecule)
+Placed K+ in mybox at (20.71, 0.98, -5.69).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.58, -11.94, 12.94).
+(Replacing solvent molecule)
+Placed K+ in mybox at (9.35, -1.21, 10.93).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.61, 11.65, 1.34).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.61, -7.13, 20.11).
+(Replacing solvent molecule)
+Placed K+ in mybox at (3.01, 14.46, -5.45).
+(Replacing solvent molecule)
+Placed K+ in mybox at (7.73, -10.89, -1.69).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-23.35, 6.84, 12.94).
+(Replacing solvent molecule)
+Placed K+ in mybox at (23.59, -6.91, -10.93).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.02, 9.86, 17.18).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-21.56, -1.06, -0.65).
+(Replacing solvent molecule)
+Placed K+ in mybox at (18.94, 2.22, 9.27).
+(Replacing solvent molecule)
+Placed K+ in mybox at (3.06, -10.77, -19.48).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.02, 9.86, -20.37).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.23, 13.73, 11.45).
+(Replacing solvent molecule)
+Placed K+ in mybox at (19.58, -9.94, 1.38).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-13.73, 6.40, -7.19).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.17, -19.50, 1.95).
+(Replacing solvent molecule)
+Placed K+ in mybox at (19.12, -12.62, -18.30).
+(Replacing solvent molecule)
+Placed K+ in mybox at (10.27, 15.73, 12.73).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-30.31, -3.07, 12.85).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-17.10, -12.23, -2.78).
+(Replacing solvent molecule)
+Placed K+ in mybox at (3.30, -1.40, 18.23).
+
+Done adding ions.
+Adding 25 counter ions to "mybox". 8332 solvent molecules will remain.
+0: Placed K+ in mybox at (25.46, 25.97, -9.08).
+0: Placed K+ in mybox at (-19.82, -13.70, -30.31).
+0: Placed K+ in mybox at (-18.04, 31.40, 2.83).
+0: Placed K+ in mybox at (-32.50, 6.40, 30.36).
+0: Placed K+ in mybox at (19.65, 2.32, 15.44).
+0: Placed K+ in mybox at (10.25, 29.14, -9.11).
+0: Placed K+ in mybox at (-12.44, -27.93, -10.97).
+0: Placed K+ in mybox at (-21.25, -31.11, 4.71).
+0: Placed K+ in mybox at (-15.28, 26.82, 20.72).
+0: Placed K+ in mybox at (-31.03, -21.69, 17.40).
+0: Placed K+ in mybox at (4.24, -22.84, -8.04).
+0: Placed K+ in mybox at (8.25, 20.88, 31.93).
+0: Placed K+ in mybox at (-10.80, 28.99, 24.28).
+0: Placed K+ in mybox at (-10.70, -7.50, -20.84).
+0: Placed K+ in mybox at (17.00, 15.13, 4.64).
+0: Placed K+ in mybox at (-29.47, 11.27, 16.71).
+0: Placed K+ in mybox at (-31.32, -7.30, -6.64).
+0: Placed K+ in mybox at (10.73, 9.10, -32.53).
+0: Placed K+ in mybox at (15.73, 22.54, 22.77).
+0: Placed K+ in mybox at (16.19, 18.37, 29.71).
+0: Placed K+ in mybox at (-28.19, 17.57, 10.93).
+0: Placed K+ in mybox at (26.92, -13.88, 28.32).
+0: Placed K+ in mybox at (-10.80, -27.33, -32.05).
+0: Placed K+ in mybox at (-18.42, -12.62, -18.30).
+0: Placed K+ in mybox at (-14.51, -26.87, -27.01).
+Adding 25 counter ions to "mybox". 8307 solvent molecules will remain.
+0: Placed Cl- in mybox at (-1.04, 23.85, -11.53).
+0: Placed Cl- in mybox at (16.99, -17.13, 26.34).
+0: Placed Cl- in mybox at (-13.96, 30.64, 7.85).
+0: Placed Cl- in mybox at (-0.08, 22.45, -15.67).
+0: Placed Cl- in mybox at (18.94, 2.22, -9.51).
+0: Placed Cl- in mybox at (19.93, -2.46, -21.13).
+0: Placed Cl- in mybox at (10.73, -28.45, -32.53).
+0: Placed Cl- in mybox at (4.29, 20.91, -16.20).
+0: Placed Cl- in mybox at (18.69, 22.45, 3.11).
+0: Placed Cl- in mybox at (-4.51, -4.00, -29.11).
+0: Placed Cl- in mybox at (-17.97, -28.72, -17.39).
+0: Placed Cl- in mybox at (-6.19, 12.46, -10.29).
+0: Placed Cl- in mybox at (-5.49, 30.42, -25.64).
+0: Placed Cl- in mybox at (18.59, 30.36, 8.16).
+0: Placed Cl- in mybox at (-32.19, -4.57, -12.66).
+0: Placed Cl- in mybox at (21.62, -32.03, 20.18).
+0: Placed Cl- in mybox at (-12.88, 13.05, 16.62).
+0: Placed Cl- in mybox at (30.51, 2.77, 25.62).
+0: Placed Cl- in mybox at (23.06, -16.64, -16.20).
+0: Placed Cl- in mybox at (-18.14, -29.31, 28.98).
+0: Placed Cl- in mybox at (11.71, -10.56, -26.41).
+0: Placed Cl- in mybox at (-3.59, 13.47, 24.44).
+0: Placed Cl- in mybox at (0.35, -12.62, -18.30).
+0: Placed Cl- in mybox at (3.50, -10.73, -16.83).
+0: Placed Cl- in mybox at (-15.28, -29.51, 20.72).
+Checking 'mybox'....
+Checking parameters for unit 'mybox'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Total unperturbed charge:  -0.002000
+Total perturbed charge:    -0.002000
+ Creating box.lib
+Building topology.
+Building atom parameters.
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 235 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	SML	1
+	WAT	8307
+  )
+ (no restraints)
+Writing pdb file: box.pdb
+   printing CRYST1 record to PDB file with box info
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

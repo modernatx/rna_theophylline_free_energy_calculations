@@ -1,0 +1,357 @@
+-I: Adding /opt/install/conda/dat/leap/prep to search path.
+-I: Adding /opt/install/conda/dat/leap/lib to search path.
+-I: Adding /opt/install/conda/dat/leap/parm to search path.
+-I: Adding /opt/install/conda/dat/leap/cmd to search path.
+-f: Source common_files/tleap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./common_files/tleap.in
+----- Source: /opt/install/conda/dat/leap/cmd/leaprc.gaff2
+----- Source of /opt/install/conda/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /opt/install/conda/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.11, May 2016)
+----- Source: /opt/install/conda/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /opt/install/conda/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /opt/install/conda/dat/leap/lib/atomic_ions.lib
+Loading library: /opt/install/conda/dat/leap/lib/solvents.lib
+Loading parameters: /opt/install/conda/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /opt/install/conda/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /opt/install/conda/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /opt/install/conda/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+----- Source: /opt/install/conda/dat/leap/cmd/leaprc.RNA.OL3
+----- Source of /opt/install/conda/dat/leap/cmd/leaprc.RNA.OL3 done
+Log file: ./leap.log
+Loading parameters: /opt/install/conda/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading library: /opt/install/conda/dat/leap/lib/RNA.lib
+Loading Mol2 file: ./lig.gaff2.mol2
+Reading MOLECULE named SML
+ Creating SML.lib
+Building topology.
+Building atom parameters.
+Loading parameters: ./lig.gaff2.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading library: ./SML.lib
+Loading PDB file: ./rna_noH.pdb
+  total atoms in file: 704
+  Leap added 361 missing atoms according to residue templates:
+       361 H / lone pairs
+Loading PDB file: ./sqm.pdb
+  total atoms in file: 21
+Box dimensions:  42.031000 25.706411 36.349636
+  Solute vdw bounding box:              100.000 100.000 100.000
+  Total bounding box for atom centers:  100.000 100.000 100.000
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   103.148 103.391 103.216 angstroms.
+  Volume: 1100750.223 A^3 
+  Total mass 571553.594 amu,  Density 0.862 g/cc
+  Added 31127 residues.
+32 K+ ions required to neutralize.
+Adding 32 counter ions to "mybox" using 1A grid
+Grid extends from solute vdw + 5.47  to  11.57
+Resolution:      1.00 Angstrom.
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.27, 3.35, -11.95).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-9.62, -4.19, 17.82).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.06, -10.56, -7.63).
+(Replacing solvent molecule)
+Placed K+ in mybox at (16.93, 8.11, -3.67).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-3.20, 12.97, -5.20).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-17.90, 2.32, 15.44).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.74, -14.73, 1.77).
+(Replacing solvent molecule)
+Placed K+ in mybox at (9.91, 17.71, 2.77).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-5.80, -1.82, -12.28).
+(Replacing solvent molecule)
+Placed K+ in mybox at (20.71, 0.98, -5.69).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-4.58, -11.94, 12.94).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.61, 11.65, 1.34).
+(Replacing solvent molecule)
+Placed K+ in mybox at (9.35, -1.21, 10.93).
+(Replacing solvent molecule)
+Placed K+ in mybox at (3.01, 14.46, -5.45).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.61, -7.13, 20.11).
+(Replacing solvent molecule)
+Placed K+ in mybox at (7.73, -10.89, -1.69).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-22.02, 11.20, 10.00).
+(Replacing solvent molecule)
+Placed K+ in mybox at (23.59, -6.91, -10.93).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.02, 9.86, 17.18).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-21.56, -1.06, -0.65).
+(Replacing solvent molecule)
+Placed K+ in mybox at (18.94, 2.22, 9.27).
+(Replacing solvent molecule)
+Placed K+ in mybox at (3.06, -10.77, -19.48).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-13.04, 6.68, 18.95).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.02, 9.86, -20.37).
+(Replacing solvent molecule)
+Placed K+ in mybox at (19.58, -9.94, 1.38).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-13.73, 6.40, -7.19).
+(Replacing solvent molecule)
+Placed K+ in mybox at (10.27, 15.73, 12.73).
+(Replacing solvent molecule)
+Placed K+ in mybox at (19.12, -12.62, -18.30).
+(Replacing solvent molecule)
+Placed K+ in mybox at (1.17, -19.50, 1.95).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-30.31, -3.07, 12.85).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-7.23, 13.73, 11.45).
+(Replacing solvent molecule)
+Placed K+ in mybox at (-17.10, -12.23, -2.78).
+
+Done adding ions.
+Adding 90 counter ions to "mybox". 31005 solvent molecules will remain.
+0: Placed K+ in mybox at (20.71, 38.53, 31.86).
+0: Placed K+ in mybox at (-25.41, 13.49, 36.96).
+0: Placed K+ in mybox at (40.56, -23.09, -24.23).
+0: Placed K+ in mybox at (16.99, -17.13, -29.98).
+0: Placed K+ in mybox at (-8.20, 20.08, -7.26).
+0: Placed K+ in mybox at (33.60, -28.62, -29.85).
+0: Placed K+ in mybox at (-0.90, 32.61, -2.91).
+0: Placed K+ in mybox at (-45.60, 46.64, 5.02).
+0: Placed K+ in mybox at (43.77, 30.24, -6.64).
+0: Placed K+ in mybox at (-41.54, -31.60, 34.20).
+0: Placed K+ in mybox at (-1.72, -26.82, -22.56).
+0: Placed K+ in mybox at (19.41, 8.24, -8.57).
+0: Placed K+ in mybox at (-5.56, -18.20, 37.42).
+0: Placed K+ in mybox at (-20.74, 7.18, -10.01).
+0: Placed K+ in mybox at (12.83, 19.17, 12.57).
+0: Placed K+ in mybox at (5.50, -16.91, -28.86).
+0: Placed K+ in mybox at (-41.10, 31.78, 36.04).
+0: Placed K+ in mybox at (-49.81, -2.91, -38.92).
+0: Placed K+ in mybox at (-0.90, 13.83, 34.63).
+0: Placed K+ in mybox at (-41.96, 8.39, 17.81).
+0: Placed K+ in mybox at (-36.91, -10.53, -46.12).
+0: Placed K+ in mybox at (-37.39, 2.22, -28.28).
+0: Placed K+ in mybox at (-5.04, -16.18, 13.96).
+0: Placed K+ in mybox at (-5.56, 39.04, 21.48).
+0: Placed K+ in mybox at (27.39, 1.48, 22.34).
+0: Placed K+ in mybox at (26.31, -35.14, 10.55).
+0: Placed K+ in mybox at (-22.36, -5.31, -13.11).
+0: Placed K+ in mybox at (3.55, 31.86, 1.00).
+0: Placed K+ in mybox at (5.36, -23.34, 43.66).
+0: Placed K+ in mybox at (-21.25, 25.22, 23.48).
+0: Placed K+ in mybox at (31.75, 35.73, -49.83).
+0: Placed K+ in mybox at (-13.28, 20.63, -10.09).
+0: Placed K+ in mybox at (9.33, -30.08, 32.18).
+0: Placed K+ in mybox at (45.70, 23.67, -28.00).
+0: Placed K+ in mybox at (-44.78, 32.51, -7.32).
+0: Placed K+ in mybox at (-46.05, -40.59, 12.73).
+0: Placed K+ in mybox at (36.31, 8.96, -32.08).
+0: Placed K+ in mybox at (37.85, -49.86, 22.27).
+0: Placed K+ in mybox at (27.39, 39.03, 3.57).
+0: Placed K+ in mybox at (-23.66, 16.75, -45.75).
+0: Placed K+ in mybox at (16.99, -49.05, 49.84).
+0: Placed K+ in mybox at (-1.88, -21.31, -40.85).
+0: Placed K+ in mybox at (32.48, -11.81, -35.11).
+0: Placed K+ in mybox at (-26.64, -26.28, 15.89).
+0: Placed K+ in mybox at (17.66, -38.29, 24.07).
+0: Placed K+ in mybox at (-43.11, -18.20, -0.13).
+0: Placed K+ in mybox at (43.05, 9.29, -38.68).
+0: Placed K+ in mybox at (-42.05, 33.55, -47.88).
+0: Placed K+ in mybox at (48.12, -36.24, 49.06).
+0: Placed K+ in mybox at (-20.50, 29.50, 14.98).
+0: Placed K+ in mybox at (34.00, 31.78, 36.04).
+0: Placed K+ in mybox at (15.36, 22.11, -0.89).
+0: Placed K+ in mybox at (-40.72, -17.69, -2.38).
+0: Placed K+ in mybox at (-21.95, -17.69, -21.16).
+0: Placed K+ in mybox at (21.81, -29.03, 5.31).
+0: Placed K+ in mybox at (35.78, 33.90, 4.64).
+0: Placed K+ in mybox at (-31.07, -16.90, 43.18).
+0: Placed K+ in mybox at (-7.78, -10.04, -41.17).
+0: Placed K+ in mybox at (-30.14, 17.37, -17.91).
+0: Placed K+ in mybox at (16.10, -17.98, 3.54).
+0: Placed K+ in mybox at (-1.19, 29.50, 22.09).
+0: Placed K+ in mybox at (30.49, 45.76, -45.18).
+0: Placed K+ in mybox at (-31.36, 36.38, 43.18).
+0: Placed K+ in mybox at (29.68, 30.04, -21.66).
+0: Placed K+ in mybox at (39.85, -47.49, -4.02).
+0: Placed K+ in mybox at (14.37, 45.94, -0.97).
+0: Placed K+ in mybox at (38.64, 46.80, 45.10).
+0: Placed K+ in mybox at (-43.74, -6.32, -29.07).
+0: Placed K+ in mybox at (20.45, 44.10, -2.78).
+0: Placed K+ in mybox at (7.93, -43.74, 19.51).
+0: Placed K+ in mybox at (46.90, -38.75, 29.71).
+0: Placed K+ in mybox at (-0.27, -19.82, -23.90).
+0: Placed K+ in mybox at (35.59, -30.36, -28.78).
+0: Placed K+ in mybox at (46.90, -9.14, 19.26).
+0: Placed K+ in mybox at (-17.75, -46.46, -39.15).
+0: Placed K+ in mybox at (-3.41, -34.22, 17.88).
+0: Placed K+ in mybox at (43.88, -9.15, 45.35).
+0: Placed K+ in mybox at (17.59, 48.28, 40.87).
+0: Placed K+ in mybox at (-19.91, 11.02, -37.07).
+0: Placed K+ in mybox at (6.22, -44.85, 30.91).
+0: Placed K+ in mybox at (-12.08, 25.97, -9.08).
+0: Placed K+ in mybox at (34.41, 36.49, -49.22).
+0: Placed K+ in mybox at (20.09, -33.85, -30.13).
+0: Placed K+ in mybox at (26.47, 6.05, -32.14).
+0: Placed K+ in mybox at (-28.89, -26.54, 13.77).
+0: Placed K+ in mybox at (5.04, -12.38, -25.96).
+0: Placed K+ in mybox at (3.50, 45.59, 39.49).
+0: Placed K+ in mybox at (4.00, -14.00, -29.04).
+0: Placed K+ in mybox at (29.35, -36.24, 11.51).
+0: Placed K+ in mybox at (19.93, -40.01, -21.13).
+Adding 90 counter ions to "mybox". 30915 solvent molecules will remain.
+0: Placed Cl- in mybox at (-27.85, 13.13, 3.12).
+0: Placed Cl- in mybox at (-0.27, 17.73, -42.67).
+0: Placed Cl- in mybox at (20.69, -35.94, 41.58).
+0: Placed Cl- in mybox at (-34.00, -24.46, 38.55).
+0: Placed Cl- in mybox at (-9.45, -11.31, -42.91).
+0: Placed Cl- in mybox at (12.08, -35.72, -21.30).
+0: Placed Cl- in mybox at (-49.49, 48.16, 3.23).
+0: Placed Cl- in mybox at (13.33, -9.48, 32.51).
+0: Placed Cl- in mybox at (-49.63, -49.13, 28.46).
+0: Placed Cl- in mybox at (-11.07, -31.50, 42.96).
+0: Placed Cl- in mybox at (13.71, -38.50, -33.69).
+0: Placed Cl- in mybox at (-39.33, 20.42, 45.12).
+0: Placed Cl- in mybox at (13.73, -16.18, 13.96).
+0: Placed Cl- in mybox at (-15.28, -48.28, 1.94).
+0: Placed Cl- in mybox at (-37.70, 21.68, 19.26).
+0: Placed Cl- in mybox at (-7.78, 8.74, -3.62).
+0: Placed Cl- in mybox at (-3.89, 16.88, -23.92).
+0: Placed Cl- in mybox at (-37.85, -39.68, -37.62).
+0: Placed Cl- in mybox at (15.12, 20.78, 9.56).
+0: Placed Cl- in mybox at (-34.69, -33.26, 34.01).
+0: Placed Cl- in mybox at (-26.83, 24.62, 47.44).
+0: Placed Cl- in mybox at (-29.10, 46.50, 11.29).
+0: Placed Cl- in mybox at (-17.52, -39.58, 29.96).
+0: Placed Cl- in mybox at (36.41, 48.57, 19.25).
+0: Placed Cl- in mybox at (45.25, 6.05, -32.14).
+0: Placed Cl- in mybox at (34.17, 32.79, -17.60).
+0: Placed Cl- in mybox at (32.10, 33.31, -41.67).
+0: Placed Cl- in mybox at (21.57, 29.42, -34.04).
+0: Placed Cl- in mybox at (0.77, 15.87, -10.32).
+0: Placed Cl- in mybox at (-5.36, -22.22, 21.19).
+0: Placed Cl- in mybox at (-48.62, -31.50, 5.41).
+0: Placed Cl- in mybox at (12.98, -1.82, 44.04).
+0: Placed Cl- in mybox at (-19.08, 35.42, -0.07).
+0: Placed Cl- in mybox at (8.45, -9.82, -7.48).
+0: Placed Cl- in mybox at (31.60, -37.16, -24.97).
+0: Placed Cl- in mybox at (16.99, 7.27, 49.84).
+0: Placed Cl- in mybox at (-20.56, -30.28, 31.07).
+0: Placed Cl- in mybox at (32.11, 46.84, -23.81).
+0: Placed Cl- in mybox at (42.20, -34.01, 30.74).
+0: Placed Cl- in mybox at (-3.80, 30.71, 40.38).
+0: Placed Cl- in mybox at (25.61, -8.17, 40.78).
+0: Placed Cl- in mybox at (-30.86, -11.58, -27.86).
+0: Placed Cl- in mybox at (-47.00, -30.08, -24.14).
+0: Placed Cl- in mybox at (16.19, -19.18, -26.62).
+0: Placed Cl- in mybox at (-2.31, -39.73, 2.29).
+0: Placed Cl- in mybox at (-12.26, 15.86, -20.14).
+0: Placed Cl- in mybox at (-45.41, -7.51, -40.44).
+0: Placed Cl- in mybox at (-42.62, 44.51, 2.44).
+0: Placed Cl- in mybox at (-29.82, -48.44, 17.08).
+0: Placed Cl- in mybox at (-5.07, 6.96, 39.99).
+0: Placed Cl- in mybox at (3.06, 45.56, 36.85).
+0: Placed Cl- in mybox at (29.77, 46.29, 33.93).
+0: Placed Cl- in mybox at (-28.93, 20.26, 3.57).
+0: Placed Cl- in mybox at (46.98, 23.15, -0.47).
+0: Placed Cl- in mybox at (-26.19, 30.72, -32.09).
+0: Placed Cl- in mybox at (-48.35, 28.99, -32.05).
+0: Placed Cl- in mybox at (45.70, -13.88, 28.32).
+0: Placed Cl- in mybox at (-3.95, 8.93, -11.08).
+0: Placed Cl- in mybox at (5.48, -34.00, -40.20).
+0: Placed Cl- in mybox at (-19.68, 13.83, -21.69).
+0: Placed Cl- in mybox at (-36.68, 39.87, -3.34).
+0: Placed Cl- in mybox at (-45.16, 30.42, 1.34).
+0: Placed Cl- in mybox at (-48.07, -35.44, -43.17).
+0: Placed Cl- in mybox at (-10.52, -35.44, -5.62).
+0: Placed Cl- in mybox at (36.43, 36.81, 5.30).
+0: Placed Cl- in mybox at (19.54, 15.87, 46.00).
+0: Placed Cl- in mybox at (-20.72, -21.45, -28.17).
+0: Placed Cl- in mybox at (-24.59, -18.38, -29.29).
+0: Placed Cl- in mybox at (46.70, -4.19, -0.95).
+0: Placed Cl- in mybox at (-1.19, 10.73, -15.46).
+0: Placed Cl- in mybox at (-19.74, 23.50, 28.77).
+0: Placed Cl- in mybox at (41.05, 8.04, -16.83).
+0: Placed Cl- in mybox at (16.83, 34.87, -46.95).
+0: Placed Cl- in mybox at (22.65, -18.21, 43.52).
+0: Placed Cl- in mybox at (-20.72, -40.22, 9.37).
+0: Placed Cl- in mybox at (-20.50, -26.82, 33.76).
+0: Placed Cl- in mybox at (42.98, 13.44, -23.60).
+0: Placed Cl- in mybox at (28.46, 31.82, -46.65).
+0: Placed Cl- in mybox at (41.05, 45.59, -16.83).
+0: Placed Cl- in mybox at (48.68, -13.15, 25.82).
+0: Placed Cl- in mybox at (-10.80, -8.55, 24.28).
+0: Placed Cl- in mybox at (16.83, -21.45, 28.15).
+0: Placed Cl- in mybox at (15.63, -38.60, 44.65).
+0: Placed Cl- in mybox at (-17.48, -0.99, 25.31).
+0: Placed Cl- in mybox at (1.31, -15.08, 44.97).
+0: Placed Cl- in mybox at (27.44, -24.33, 43.44).
+0: Placed Cl- in mybox at (-4.04, -32.26, 9.60).
+0: Placed Cl- in mybox at (-37.70, -15.87, 19.26).
+0: Placed Cl- in mybox at (23.59, 30.64, 45.39).
+0: Placed Cl- in mybox at (18.59, -44.74, 45.71).
+Checking 'mybox'....
+Checking parameters for unit 'mybox'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Total unperturbed charge:  -0.000001
+Total perturbed charge:    -0.000001
+ Creating box.lib
+Building topology.
+Building atom parameters.
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 235 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	SML	1
+	WAT	30915
+  )
+ (no restraints)
+Writing pdb file: box.pdb
+   printing CRYST1 record to PDB file with box info
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

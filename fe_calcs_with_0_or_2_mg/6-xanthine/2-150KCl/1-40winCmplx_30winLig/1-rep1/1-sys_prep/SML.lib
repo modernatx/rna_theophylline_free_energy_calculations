@@ -1,0 +1,125 @@
+!!index array str
+ "SML"
+!entry.SML.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "O1" "o" 0 1 131072 1 8 -0.617500
+ "O2" "o" 0 1 131072 2 8 -0.633500
+ "N1" "n" 0 1 131072 3 7 -0.513400
+ "N2" "na" 0 1 131072 4 7 -0.265900
+ "N3" "n" 0 1 131072 5 7 -0.581500
+ "N4" "nc" 0 1 131072 6 7 -0.683000
+ "C1" "cd" 0 1 131072 7 6 -0.354200
+ "C2" "cc" 0 1 131072 8 6 0.487200
+ "C3" "c" 0 1 131072 9 6 0.762100
+ "C4" "c" 0 1 131072 10 6 0.815500
+ "C5" "cd" 0 1 131072 11 6 0.451400
+ "H1" "hn" 0 1 131072 12 1 0.368500
+ "H2" "hn" 0 1 131072 13 1 0.328700
+ "H3" "hn" 0 1 131072 14 1 0.359500
+ "H4" "h5" 0 1 131072 15 1 0.074100
+!entry.SML.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "O1" "o" 0 -1 0.0
+ "O2" "o" 0 -1 0.0
+ "N1" "n" 0 -1 0.0
+ "N2" "na" 0 -1 0.0
+ "N3" "n" 0 -1 0.0
+ "N4" "nc" 0 -1 0.0
+ "C1" "cd" 0 -1 0.0
+ "C2" "cc" 0 -1 0.0
+ "C3" "c" 0 -1 0.0
+ "C4" "c" 0 -1 0.0
+ "C5" "cd" 0 -1 0.0
+ "H1" "hn" 0 -1 0.0
+ "H2" "hn" 0 -1 0.0
+ "H3" "hn" 0 -1 0.0
+ "H4" "h5" 0 -1 0.0
+!entry.SML.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.SML.unit.childsequence single int
+ 2
+!entry.SML.unit.connect array int
+ 0
+ 0
+!entry.SML.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 9 2
+ 2 10 2
+ 3 8 1
+ 3 10 1
+ 3 12 1
+ 4 7 1
+ 4 11 1
+ 4 13 1
+ 5 9 1
+ 5 10 1
+ 5 14 1
+ 6 8 1
+ 6 11 2
+ 7 8 2
+ 7 9 1
+ 11 15 1
+!entry.SML.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+ "R" 1 "A" 13
+ "R" 1 "A" 14
+ "R" 1 "A" 15
+!entry.SML.unit.name single str
+ "SML"
+!entry.SML.unit.positions table  dbl x  dbl y  dbl z
+ 8.133000 1.175000 35.946000
+ 11.370000 2.077000 39.148000
+ 10.446000 3.863000 38.018000
+ 8.031000 4.178000 35.524000
+ 9.752000 1.634000 37.547000
+ 9.321000 5.584000 36.689000
+ 8.776000 3.404000 36.365000
+ 9.553000 4.293000 37.062000
+ 8.818000 1.988000 36.558000
+ 10.582000 2.500000 38.301000
+ 8.395000 5.482000 35.756000
+ 11.001000 4.556000 38.510000
+ 7.343000 3.858000 34.855000
+ 9.844000 0.642000 37.747000
+ 7.948000 6.303000 35.212000
+!entry.SML.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.SML.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "SML" 1 16 1 "?" 0
+!entry.SML.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.SML.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.SML.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

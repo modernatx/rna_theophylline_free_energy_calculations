@@ -1,0 +1,161 @@
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/prep to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/lib to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/parm to search path.
+-I: Adding /opt/install/conda/envs/ambertools/dat/leap/cmd to search path.
+-f: Source tleap_ligOnly.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap_ligOnly.in
+----- Source: /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.gaff2
+----- Source of /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.11, May 2016)
+----- Source: /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /opt/install/conda/envs/ambertools/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /opt/install/conda/envs/ambertools/dat/leap/lib/atomic_ions.lib
+Loading library: /opt/install/conda/envs/ambertools/dat/leap/lib/solvents.lib
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /opt/install/conda/envs/ambertools/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading Mol2 file: ../../1-sys_prep//lig.gaff2.mol2
+Reading MOLECULE named SML
+ Creating SML.lib
+Building topology.
+Building atom parameters.
+Loading parameters: ../../1-sys_prep/lig.gaff2.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading library: ./SML.lib
+Loading PDB file: ./ligandOnly.pdb
+  total atoms in file: 25095
+Box dimensions:  65.685000 65.219000 65.700000
+  Solute vdw bounding box:              66.000 66.000 66.000
+  Total bounding box for atom centers:  66.000 66.000 66.000
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   69.483 69.494 69.062 angstroms.
+  Volume: 333475.615 A^3 
+  Total mass 153029.100 amu,  Density 0.762 g/cc
+  Added 74 residues.
+32 Cl- ions required to neutralize.
+Adding 32 counter ions to "mybox" using 1A grid
+Grid extends from solute vdw + 8.06  to  14.57
+Resolution:      1.00 Angstrom.
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed Cl- in mybox at (4.35, -5.52, 5.30).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (7.48, 12.85, 3.80).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (9.89, -7.29, -8.71).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-12.27, -1.46, 14.89).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-2.76, 10.83, -10.12).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-10.05, -13.85, 4.99).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (5.25, 4.86, 11.23).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (17.59, 7.20, -4.38).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-12.92, 9.69, 11.73).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (0.82, -6.62, 11.19).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (9.69, 13.04, -9.11).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-0.24, -10.75, -6.79).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (15.86, -3.02, -16.30).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-25.62, 1.19, 16.28).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-2.39, 18.58, 8.73).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-4.69, -23.59, 14.87).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (0.56, 3.56, -20.94).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-19.83, -3.71, -1.79).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (17.39, -2.51, 2.60).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-5.15, 20.73, -8.56).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-3.17, -9.87, 21.74).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (13.63, 27.55, 8.46).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-2.62, -20.89, -0.26).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-17.19, 10.93, 1.39).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (13.48, 12.85, -20.72).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-1.17, 26.82, 21.20).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (12.81, -19.24, -10.85).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-20.92, -0.31, 29.99).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-17.13, 1.81, -18.71).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-28.17, 12.09, 25.92).
+(No solvent overlap)
+Placed Cl- in mybox at (5.87, -33.27, -14.02).
+(Replacing solvent molecule)
+Placed Cl- in mybox at (-15.81, -12.75, 18.83).
+
+Done adding ions.
+Checking 'mybox'....
+Checking parameters for unit 'mybox'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Total unperturbed charge:  -0.002000
+Total perturbed charge:    -0.002000
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 8 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	SML	1
+	WAT	8387
+  )
+ (no restraints)
+Writing pdb file: ligandOnly.pdb
+   printing CRYST1 record to PDB file with box info
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

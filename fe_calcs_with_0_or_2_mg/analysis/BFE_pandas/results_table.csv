@@ -1,0 +1,22 @@
+Condition ID,Salt Condition,# of Mg,Water Model,Ligand Force Field,# windows,RNA Backbone Restraints,MAE,RMSE,Pearson's r,Kenadall's Tau,Spearman's Rho
+1,55 NaCl,0,TIP3P,GAFF2,"40 win, 1 ns/win",No,1.4,2.0,0.8,0.5,0.7
+2,55 NaCl,2,TIP3P,GAFF2,"40 win, 1 ns/win",No,2.2,2.4,0.9,0.7,0.8
+3,55 NaCl,3,TIP3P,GAFF2,"40 win, 1 ns/win",No,3.0,3.1,0.6,0.7,0.9
+4,55 NaCl,0,TIP3P,GAFF2,"40 win, 1 ns/win",Yes,2.2,2.5,0.6,0.7,0.9
+5,55 NaCl,2,TIP3P,GAFF2,"40 win, 1 ns/win",Yes,2.6,2.9,0.7,0.7,0.9
+6,55 NaCl,3,TIP3P,GAFF2,"40 win, 1 ns/win",Yes,2.7,3.2,0.4,0.3,0.4
+7,55 NaCl,2,OPC,GAFF2,"40 win, 1 ns/win",No,2.3,2.8,0.3,0.3,0.5
+8,55 NaCl,2,TIP3P,OpenFF,"40 win, 1 ns/win",No,2.4,2.8,0.5,0.5,0.7
+9,55 NaCl,3,TIP3P,OpenFF,"40 win, 1 ns/win",No,2.4,2.7,0.7,0.5,0.6
+10,55 KCl,2,TIP3P,GAFF2,"40 win, 1 ns/win",No,1.9,2.5,0.3,0.1,0.1
+11,55 KCl,3,TIP3P,GAFF2,"40 win, 1 ns/win",No,2.4,2.8,0.5,0.5,0.6
+12,150 KCl,3,TIP3P,GAFF2,"40 win, 1 ns/win",No,1.7,2.5,0.2,0.5,0.6
+13,Neutralized,3,TIP3P,GAFF2,"40 win, 1 ns/win",No,2.5,2.7,0.8,0.5,0.6
+14,55 NaCl,2,TIP3P,GAFF2,"80 win, 1 ns/win",No,2.8,2.9,0.9,0.7,0.9
+15,55 NaCl,2,TIP3P,GAFF2,"40 win, 2 ns/win",No,2.8,3.0,0.9,0.6,0.8
+16,55 NaCl,2,TIP3P,GAFF2,"80 win, 1 ns/win",Yes,2.2,2.4,0.7,0.9,0.9
+17,55 NaCl,2,TIP3P,GAFF2,"40 win, 2 ns/win",Yes,2.4,2.6,0.6,0.6,0.7
+18,55 NaCl,0,TIP3P,GAFF2,"80 win, 1 ns/win",Yes,1.8,2.0,0.8,0.7,0.9
+19,55 NaCl,0,TIP3P,GAFF2,"40 win, 2 ns/win",Yes,2.3,2.6,0.5,0.7,0.9
+20,55 NaCl,2,TIP3P,GAFF2,MM-GBSA,No,8.3,8.5,0.3,0.5,0.6
+21,55 NaCl,0,TIP3P,GAFF2,MM-GBSA,No,7.8,8.6,0.1,0.5,0.4

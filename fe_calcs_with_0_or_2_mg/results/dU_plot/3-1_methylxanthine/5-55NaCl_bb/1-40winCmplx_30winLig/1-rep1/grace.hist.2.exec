@@ -1,0 +1,243 @@
+	 xmgrace -pexec "arrange (4,4,0.10,0.40,0.20,OFF,OFF,OFF)"   -pexec "with string ;
+							   string on ;
+		                            		   string g0 ;
+        		                    	  	   string loctype view ;
+        		                    		   string 0.030, 0.950 ;
+        		                    		   string char size 1.6 ; 
+string def \"\\f{Helvetica-Bold}ParseFEP\\f{Helvetica}: Probability distribution sheet 2 \" " \
+      -graph 0 -block file17.dat.hist -bxy 1:2 -block file17.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    1.100 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 1 -block file18.dat.hist -bxy 1:2 -block file18.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    1.100 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 2 -block file19.dat.hist -bxy 1:2 -block file19.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.900 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 3 -block file20.dat.hist -bxy 1:2 -block file20.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.900 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 4 -block file21.dat.hist -bxy 1:2 -block file21.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 5 -block file22.dat.hist -bxy 1:2 -block file22.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 6 -block file23.dat.hist -bxy 1:2 -block file23.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph  7  -block file24.dat.hist -bxy 1:2 -block file24.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        yaxis label char size 1.8 ; 
+                                                                        yaxis label place spec ; 
+                                                                        yaxis label place -0.10,-0.25 ; 
+                                                                        yaxis label \"\\r{180}\\1P\\0\\s\\1fwd\\0\\N\\f{Helvetica}(\\f{Symbol}D\\1U\\0\\f{Helvetica} ), \\R{red}\\1P\\0\\s\\1rev\\0\\N\\f{Helvetica}(\\f{Symbol}D\\1U\\0\\f{Helvetica} )\" ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 8 -block file25.dat.hist -bxy 1:2 -block file25.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 9 -block file26.dat.hist -bxy 1:2 -block file26.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 10 -block file27.dat.hist -bxy 1:2 -block file27.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.600 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 11 -block file28.dat.hist -bxy 1:2 -block file28.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.500 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+  								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 12 -block file29.dat.hist -bxy 1:2 -block file29.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.800 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+									yaxis ticklabel on; 
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+ 							   
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 13 -block file30.dat.hist -bxy 1:2 -block file30.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.800 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on;
+                                                                        xaxis ticklabel format decimal ;
+                                                                        xaxis label char size 1.8 ; 
+                                                                        xaxis label place spec ; 
+                                                                        xaxis label place  0.15,0.07 ; 
+                                                                        xaxis label \"\\f{Symbol}D\\1U\\0\\f{Helvetica} (kcal/mol)\" ;
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+ 								
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 14 -block file31.dat.hist -bxy 1:2 -block file31.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.800 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+									yaxis ticklabel on; 
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+ 							   
+                                                                        yaxis ticklabel char size 0.8 " \
+      -graph 15 -block file32.dat.hist -bxy 1:2 -block file32.dat.rev.hist -bxy 1:2 -pexec "xaxis tick on ; 
+    yaxis tick on;
+    yaxis tick major    0.800 ; 
+    yaxis tick minor ticks        1 ; 
+            xaxis ticklabel on; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 1 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+									yaxis ticklabel on; 
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+ 							   
+                                                                        yaxis ticklabel char size 0.8 " \
+        -hardcopy -printfile probability.2.png -hdevice PNG

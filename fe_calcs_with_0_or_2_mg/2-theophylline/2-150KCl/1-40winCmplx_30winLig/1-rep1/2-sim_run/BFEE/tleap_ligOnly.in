@@ -1,0 +1,37 @@
+# Load force field parameters
+source leaprc.gaff2
+source leaprc.water.tip3p
+
+# Load small molecule parameters
+SML = loadmol2 ../../1-sys_prep//lig.gaff2.mol2
+saveoff SML SML.lib
+loadamberparams ../../1-sys_prep//lig.gaff2.frcmod
+loadoff SML.lib
+
+# Load equil sys
+sys = loadpdb ligandOnly.pdb
+
+
+mybox = combine { sys } 
+setbox mybox centers
+
+# Solvate the complex with a cubic water box with 100 A dimension (box dimention 100, buffer )
+set mybox box {66 66 66}
+solvatebox mybox TIP3PBOX {0 0 0}
+
+# Add ions to neutralize the system
+addions mybox Cl- 0
+
+# Validate input (Takes more than 45 min)
+check mybox
+
+# Calculate the total charge, for logging purposes
+charge mybox
+
+# Write Paraemeters and PDB file.
+#saveoff mybox LIG_ONLY_noSolv.lib
+saveamberparm mybox ligandOnly.parm7 ligandOnly.inpcrd
+savepdb mybox ligandOnly.pdb
+
+
+quit

@@ -1,0 +1,18 @@
+colvarsTrajFrequency      5000             
+colvarsRestartFrequency   5000            
+indexFile                 ../restraints/bb.ndx      
+colvar {                                    
+    name RMSD_bb                                
+    rmsd {                                  
+        atoms {                             
+            indexGroup  bb               
+        }                                   
+        refpositionsfile  ../restraints/complex.xyz          
+    }                                       
+}                                           
+                                       
+harmonic {                          
+    colvars         RMSD_bb            
+    forceConstant   10.0   
+    centers         0.0     
+}   

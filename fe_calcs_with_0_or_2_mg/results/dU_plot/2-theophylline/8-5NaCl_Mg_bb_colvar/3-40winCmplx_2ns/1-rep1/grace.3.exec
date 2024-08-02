@@ -1,0 +1,148 @@
+     xmgrace -pexec "arrange (4,4,0.10,0.40,0.20,OFF,OFF,OFF)"   -pexec "with string ;
+                                                           string on ;
+                                                           string g0 ;
+                                                           string loctype view ;
+                                                           string 0.030, 0.950 ;
+                                                           string char size 1.6 ; 
+string def \"\\f{Helvetica-Bold}ParseFEP\\f{Helvetica}: Free energy sheet 3 \" " \
+      -graph 0 -block file33.dat -bxy 1:3 -block file33.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g0 ; 
+                                                                            string loctype view ;
+                                                                            string   0.1000,   0.9100 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.2000 to   0.1750 \" " \
+      -graph 1 -block file34.dat -bxy 1:3 -block file34.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g1 ; 
+                                                                            string loctype view ;
+                                                                            string   0.3950,   0.9100 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.1750 to   0.1500 \" " \
+      -graph 2 -block file35.dat -bxy 1:3 -block file35.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g2 ; 
+                                                                            string loctype view ;
+                                                                            string   0.6900,   0.9100 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.1500 to   0.1250 \" " \
+      -graph 3 -block file36.dat -bxy 1:3 -block file36.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g3 ; 
+                                                                            string loctype view ;
+                                                                            string   0.9850,   0.9100 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.1250 to   0.1000 \" " \
+      -graph 4 -block file37.dat -bxy 1:3 -block file37.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g4 ; 
+                                                                            string loctype view ;
+                                                                            string   0.1000,   0.7000 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.1000 to   0.0750 \" " \
+      -graph 5 -block file38.dat -bxy 1:3 -block file38.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g5 ; 
+                                                                            string loctype view ;
+                                                                            string   0.3950,   0.7000 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.0750 to   0.0500 \" " \
+      -graph 6 -block file39.dat -bxy 1:3 -block file39.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ; 
+                                                                          string g6 ; 
+                                                                            string loctype view ;
+                                                                            string   0.6900,   0.7000 ;
+                                                                            string char size 0.8 ;
+                                                                            string def \"\\f{Symbol}l\\f{Helvetica}= 0.0500 to   0.0250 \" " \
+      -graph  7  -block file40.dat -bxy 1:3 -block file40.dat.rev -bxy 1:3 -pexec "xaxis ticklabel off ; 
+                                                                        xaxis ticklabel format decimal ; 
+                                                                        yaxis label char size 1.8 ; 
+                                                                        yaxis label place spec ; 
+                                                                        yaxis label place -0.10,-0.25 ; 
+                                                                        yaxis label  \"\\r{180}\\f{Symbol}D\\1G\\0\\s\\1fwd\\0\\N,\\R{red}\\f{Symbol}D\\1G\\0\\s\\1rev\\0\\N\\R{black}\\f{Helvetica} (kcal/mol)\" ;
+                                                                        xaxis ticklabel prec 0 ; 
+                                                                        xaxis ticklabel font \"Helvetica\" ;
+                                                                        xaxis ticklabel char size 0.8 ;
+                                                                        yaxis ticklabel format decimal ; 
+                                                                        yaxis ticklabel prec 3 ; 
+                                                                        yaxis ticklabel font \"Helvetica\" ;
+                                                                        yaxis ticklabel char size 0.8 ;
+                                                                        with string ;
+                                                                             string on ;   
+                                                                           string g7 ; 
+                                                                             string loctype view ;
+                                                                             string   0.9850,   0.7000 ;
+                                                                             string char size 0.8 ;
+                                                                             string def \"\\f{Symbol}l\\f{Helvetica}= 0.0250 to   0.0000 \" " \
+        -pexec "kill g8" \
+        -pexec "kill g9" \
+        -pexec "kill g10" \
+        -pexec "kill g11" \
+        -pexec "kill g12" \
+        -pexec "kill g13" \
+        -pexec "kill g14" \
+        -pexec "kill g15" \
+        -hardcopy -printfile free-energy.3.png -hdevice PNG

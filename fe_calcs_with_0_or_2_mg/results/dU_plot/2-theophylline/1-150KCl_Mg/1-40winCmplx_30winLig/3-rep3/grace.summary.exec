@@ -1,0 +1,26 @@
+ xmgrace -pexec "arrange (3,1,0.10,0.40,0.20,OFF,OFF,OFF)"  -pexec "with string ;
+		                                 string on ;
+                		                 string g0 ;
+                		                 string loctype view ;
+                		                 string 0.030, 0.950 ;
+                		                 string char size 1.6 ;
+                		                 string def \"\\f{Helvetica-Bold}ParseFEP\\f{Helvetica}: Summary \" "  -graph 0 -block temp.ParseFEP.log -bxy 1:3 -block temp.reverse.log -bxy 1:3 -pexec "xaxis ticklabel on ;
+                                                         xaxis tick major 0.1 ; 
+                                                         xaxis tick minor 0.02 ;
+                                                         xaxis ticklabel format decimal ; 
+                                                         xaxis ticklabel prec 1 ; 
+                                                         xaxis ticklabel font \"Helvetica\" ;
+                                                         xaxis ticklabel char size 0.8 ;
+                                                         xaxis label char size 1.2 ;
+                                                         xaxis label place spec ;
+                                                         xaxis label place  0.00,0.07 ;
+                                                         xaxis label \"\\f{Symbol}l\" ;
+                                                         yaxis label char size 1.2 ;
+                                                         yaxis label place spec ;
+                                                         yaxis label place  0.00,-1.15 ;
+                                                         yaxis label  \"\\r{180}\\f{Symbol}D\\1G\\0\\f{Helvetica} (kcal/mol)\" ;
+                                                         yaxis ticklabel format decimal ; 
+                                                         yaxis ticklabel prec 3 ; 
+                                                         yaxis ticklabel font \"Helvetica\" ;
+                                                         yaxis ticklabel char size 0.8"  -pexec "kill g1"  -pexec "kill g2"  -hardcopy -printfile summary.png -hdevice PNG 
+			
