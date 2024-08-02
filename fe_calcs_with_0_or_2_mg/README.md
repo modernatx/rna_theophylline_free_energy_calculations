@@ -203,23 +203,23 @@ To get the free energy results from BFEE2 use:
 For doubling the sampling with 80 windows, change the following lines in the BFEE2 analysis scripts:    
 `vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/third_party/py_bar.py`     
 go to line 170 and change the following lines:    
-`170         for i in range(len(forward_data[0])):  
-171             for j in range(len(backward_data[0])):  
-172                 if forward_data[0][i][0] == backward_data[0][j][1] and    
-173                     forward_data[0][i][1] == backward_data[0][j][0]:  
-174                     merged_data.append((forward_data[1][i], backward_data[1][j]))  
-175                     break  
-176             else:  
-177                 raise RuntimeError('Error! the forward and backward files do not match!')`    
+`170         for i in range(len(forward_data[0])):`   
+`171             for j in range(len(backward_data[0])):`   
+`172                 if forward_data[0][i][0] == backward_data[0][j][1] and`    
+`173                     forward_data[0][i][1] == backward_data[0][j][0]:`  
+`174                     merged_data.append((forward_data[1][i], backward_data[1][j]))`  
+`175                     break`  
+`176             else:`  
+`177                 raise RuntimeError('Error! the forward and backward files do not match!')`    
 to this:    
-`170         for i in range(len(forward_data[0])):  
-171             for j in range(len(backward_data[0])):  
-172                 if ( forward_data[0][i][0] - backward_data[0][j][1] < 1E-5) and    
-173                     ( forward_data[0][i][1] - backward_data[0][j][0]< 1E-5 ):  
-174                     merged_data.append((forward_data[1][i], backward_data[1][j]))  
-175                     break  
-176             else:  
-177                 raise RuntimeError('Error! the forward and backward files do not match!')`   
+`170         for i in range(len(forward_data[0])):`  
+`171             for j in range(len(backward_data[0])):`  
+`172                 if ( forward_data[0][i][0] - backward_data[0][j][1] < 1E-5) and`    
+`173                     ( forward_data[0][i][1] - backward_data[0][j][0]< 1E-5 ):`  
+`174                     merged_data.append((forward_data[1][i], backward_data[1][j]))`  
+`175                     break`  
+`176             else:`  
+`177                 raise RuntimeError('Error! the forward and backward files do not match!')`   
 
 #### D.2. Analysis of simulations with RMSD backbone restraints
 For RMSD backbone restraints analysis do the following change:    
