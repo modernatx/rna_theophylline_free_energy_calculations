@@ -233,6 +233,8 @@ Run `run_parsefep_du_plot.sh` in the main direcotry:
 `bash run_parsefep_du_plot.sh`
 To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main direcotry.
 
+### Conda environments ###
+You can find the environment requirement files in: `/cond_envs`
 
 
 
