@@ -14,11 +14,9 @@ We performed free energy calculations for all six ligands mentioned in the manus
 
 All free energy calculations were run as three independent replicates. Here, we provided the input files and scripts for only the first replicate (`1-rep1/`) to limit repository size. The other replicates were originally organized under separate directories in the same location (`2-rep2/` and `3-rep3/`).
 
-For the "1-rna_only" system, only the equilibration was done to check if the RNA undergoes large conformational changes without the bound ligand or not.
 
 ```
 .
-├── 1-rna_only                                          : directory for equilibration of RNA-only system 
 ├── 2-theophylline                                      : system directory for RNA-ligand complexes named by ligands
 │   ├── 1-150KCl_Mg                                     : condition director (salt and Mg)
 │   │   ├── 1-40winCmplx_30winLig                       : alchemical protocol directory (number of lambda windows)       						
@@ -56,25 +54,10 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 │   ├── RDF                            : analysis of monovalent cation distribution
 ├── results                            : common files and scripts templates are kept here
 │   ├── BFE_with_failed                : BFEE free energy results after removal of rejected replicates
-│   ├── accept_reject_files            : Paths to free energy calculations of accepted and rejected replicates
-│   ├── dU_plot                        : plotting prob. dist. function overlap of potential-energy differences (DeltaU)
 ```
 
 
 ## Simulated systems and conditions ##
-<!-- 2-theophylline:     Conditions: {1-150KCl_Mg, 2-150KCl, 3-55NaCl_Mg, 4-55NaCl, 5-55NaCl_bb, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3}
-3-1_methylxanthine: Conditions: {1-150KCl_Mg}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3}                
-4-3_methylxanthine: Conditions: {1-150KCl_Mg}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3} 
-5-hypoxanthine:     Conditions: {1-150KCl_Mg}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3}
-6-xanthine:         Conditions: {1-150KCl_Mg, 2-150KCl, 3-55NaCl_Mg, 4-55NaCl, 5-55NaCl_bb, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3}
-7-caffeine:         Conditions: {1-150KCl_Mg, 2-150KCl, 3-55NaCl_Mg, 4-55NaCl, 5-55NaCl_bb, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb}
-                    Replicas:   {1-rep1, 2-rep2, 3-rep3} -->
-
 
 ### Ligands ###
 | Directory Name      | Ligand                | Binding pose source                        | Charge   | 
@@ -89,18 +72,13 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 ### Conditions ###
 | Directory Name              | Salt condition                | Structural Mg<sup>2+*</sup> ion               | Positional restraints                        |
 | :----:              |    :----:                     |    :----:                     |    :----:                                    |
-| 1-150KCl_Mg         | 150 mM KCl | 2 Mg<sup>2+*</sup>|                     -                        |                                     
-| 2-150KCl            | 150 mM KCl | None                   |                     -                        | 
-| 3-55NaCl_Mg         | 55 mM NaCl | 2 Mg<sup>2+*</sup> |                     -                        |
-| 4-55NaCl            | 55 mM NaCl  | None                   |                     -                        |
-| 5-55NaCl_bb         | 55 mM NaCl | None                    |RNA backbone, ref: initial pdb positions      |
-|6-55NaCl_Mg_bb       | 55 mM NaCl| 2 Mg<sup>2+*</sup> |RNA backbone, ref: initial pdb positions      |
-|7-55NaCl_Mg_postEq_bb| 55 mM NaCl| 2 Mg<sup>2+*</sup> |RNA backbone, ref: last frame of step: 000_eq |
-|8-55NaCl_Mg_bb_colvar|55 mM NaCl| 2 Mg<sup>2+*</sup> | RNA backbone, ref: initial pdb positions      |
-|9-55NaCl_bb_colvar   |55 mM NaCl  | None                | RNA backbone, ref: initial pdb positions      |
-|10-55KCl_Mg          |55 mM KCl| 2 Mg<sup>2+*</sup>  | RNA backbone, ref: initial pdb positions      |
+| 1-55NaCl_3Mg         | 55 mM NaCl | 3 Mg<sup>2+*</sup>|                     -                        |                                     
+| 2-Neut_3Mg            | None | 3 Mg<sup>2+*</sup>                   |                     -                        | 
+| 3-55KCl_3Mg         | 55 mM KCl | 3 Mg<sup>2+*</sup> |                     -                        |
+| 4-55NaCl_3Mg_bb_colvar| 55 mM NaCl  |3 Mg<sup>2+*</sup>                  |  RNA backbone, ref: initial pdb positions                  |
 
-<sup>*</sup>coordinating w/ (residue: 22-24) & (residues: 14-16)
+
+<sup>*</sup>coordinating w/ (residue: 22-24) & (residues: 14-16) & (residues: 2-32)
 
 ### Exploration of alchemical protocols ###
 
