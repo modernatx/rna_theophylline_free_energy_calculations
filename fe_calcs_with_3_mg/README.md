@@ -1,6 +1,7 @@
-# Free energy calculations with RNA model with zero or two Mg2+ ions
+# Free energy calculations with RNA model with three Mg2+ ions
 
 This directory contains equilibration and alchemical free energy calculations of theophylline and its analogs using BFEE2 Alchemical Route.
+Calculations are performed in the presence of three structural Mg2+ ions.
 
 
 ## Directory Map ##
