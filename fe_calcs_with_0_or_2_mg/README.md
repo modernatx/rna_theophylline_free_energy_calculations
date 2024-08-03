@@ -10,7 +10,7 @@ eg. For example the first replicate of the simulations of theophylline with RNA 
 
 ![directory_structure](../images/dir_structure_for_0_and_2_mg_models.png)
 
-We performed free energy calculations for all six ligands mentioned in the manuscript, however only directories of theopylline and xanthine are provided in this repository as examples (`2-theophylline/` and `6-xanthine/`). The setup of calculations of other analogs was exactly the same as the steps for xanthine. 
+We performed free energy calculations for all six ligands mentioned in the manuscript, however only directories of theophylline and xanthine are provided in this repository as examples (`2-theophylline/` and `6-xanthine/`). The setup of calculations of other analogs was exactly the same as the steps for xanthine. 
 
 All free energy calculations were run as three independent replicates. Here, we provided the input files and scripts for only the first replicate (`1-rep1/`) to limit repository size. The other replicates were originally organized under separate directories in the same location (`2-rep2/` and `3-rep3/`).
 
@@ -21,7 +21,7 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 ├── 1-rna_only                                          : directory for equilibration of RNA-only system 
 ├── 2-theophylline                                      : system directory for RNA-ligand complexes named by ligands
 │   ├── 1-150KCl_Mg                                     : condition director (salt and Mg)
-│   │   ├── 1-40winCmplx_30winLig                       : alchemical protocol directory (number of labda windows)       						
+│   │   ├── 1-40winCmplx_30winLig                       : alchemical protocol directory (number of lambda windows)       						
 │   │   │   ├── 1-rep1					: replica directory
 │   │   │   │   └── 0-starting_PDB			: input PDB from RCSB database
 │   │   │   │   └── 1-sys_prep  			: system preparation files
@@ -117,6 +117,8 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 You can find the environment requirement files in: `../cond_envs`
 
 ### B. System set up ###
+
+#### B.1. System set up for a single system
 Necessary files for initial system preparation can be found in `1-sys_prep` directory for each system.
 
 For conditions: {1-150KCl_Mg, 3-55NaCl_Mg, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb} we include 2 Mg2+ ions binding to the RNA 
@@ -150,7 +152,12 @@ User must open the `eq.pdb` in a visualization software such as PyMol and check 
 
 7) After generating the input file using BFEE2, user needs to run "run_fix_ligOnly.sh", to neutralize the ligandOnly system. 
 
-### B.1. Adding backbone restraints ###
+
+#### B.2. System setup for a group of systems and replicates.
+
+We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_0_or_2_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
+
+#### B.3. Adding backbone restraints ###
 For conditions, 5-55NaCl_bb, 6-55NaCl_Mg_bb, and 7-55NaCl_Mg_postEq_bb we applied backbone restraints (2 kcal/mol/A**2)
 For conditions: 5-55NaCl_bb, 6-55NaCl_Mg_bb user needs to first generate each systems and after equilibration and
 generation of files w/ BFEE, the user needs to run `run_add_bb.sh` to add restraint-specific lines in the config files.
