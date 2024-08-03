@@ -6,7 +6,7 @@ This directory contains equilibration and alchemical free energy calculations of
 ## Directory Map ##
 
 Directories were organized using the following structure:  `[#-ligand]/[#-condition]/[#-protocol]/[#-replicate]/`.
-eg. For example the first replicate of the simulations of theophylline with RNA aptamer with 55 mM NaCl condition and 2 structural Mg2+ ions with our default alchemical protocol can be found in this path: `2-theophylline/3-55NaCl_Mg/1-40winCmplx_30winLig/1-rep1/`.
+eg. For example the first replicate of the simulations of theophylline with RNA aptamer with 55 mM NaCl condition and 2 structural Mg2+ ions with our default alchemical protocol can be found in this path: `2-theophylline/1-55NaCl_3Mg/1-40winCmplx_30winLig/1-rep1/`.
 
 ![directory_structure](../images/dir_structure_for_3_mg_models.png)
 
