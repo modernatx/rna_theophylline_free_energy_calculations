@@ -122,7 +122,7 @@ User must open the `eq.pdb` in a visualization software such as PyMol and check 
 
 #### B.2. System setup for a group of systems and replicates.
 
-We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_0_or_2_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
+We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_3_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
 
 #### B.3. Adding backbone restraints ###
 To set the restraints user needs to run: ` source run_bb_colvar.sh`.
