@@ -49,6 +49,7 @@ For the "1-rna_only" system, only the equilibration was done to check if the RNA
 .	.	.    
 ├── 8-rna_RMSD_colvar_contr            : RNA only system for calculating contributions of RNA backbone restraints
 ├── common_files                       : common files and script templates are kept here
+├── automation_scripts                 : scripts for setting up a group of calculations all at once
 ├── analysis                           : analysis of free energy calculations
 │   ├── BFE_pandas                     : analysis of binding free energy predictions vs experiment
 │   │   ├── analysis.ipynb             : calculate final estimates and plot predicted vs experimental free energies
