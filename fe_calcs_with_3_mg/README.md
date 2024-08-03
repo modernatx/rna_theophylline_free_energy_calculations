@@ -8,7 +8,7 @@ This directory contains equilibration and alchemical free energy calculations of
 Directories were organized using the following structure:  `[#-ligand]/[#-condition]/[#-protocol]/[#-replicate]/`.
 eg. For example the first replicate of the simulations of theophylline with RNA aptamer with 55 mM NaCl condition and 2 structural Mg2+ ions with our default alchemical protocol can be found in this path: `2-theophylline/3-55NaCl_Mg/1-40winCmplx_30winLig/1-rep1/`.
 
-![directory_structure](../images/dir_structure_for_0_and_2_mg_models.png)
+![directory_structure](../images/dir_structure_for_3_mg_models.png)
 
 We performed free energy calculations for all six ligands mentioned in the manuscript, however only directories of theophylline and xanthine are provided in this repository as examples (`2-theophylline/` and `6-xanthine/`). The setup of calculations of other analogs was exactly the same as the steps for xanthine. 
 
