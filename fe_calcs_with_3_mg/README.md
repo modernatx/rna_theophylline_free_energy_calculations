@@ -80,15 +80,6 @@ All free energy calculations were run as three independent replicates. Here, we 
 
 <sup>*</sup>coordinating w/ (residue: 22-24) & (residues: 14-16) & (residues: 2-32)
 
-### Exploration of alchemical protocols ###
-
-| System                                                                          | Simulated conditions | # replicas | RNA-ligand system # windows | ligand-only system # windows |
-| :----:                                                                          |    :----:            |   :----:   |    :----:                   |    :----:                    |    
-|theophylline, xanthine, caffein                                                  | 1-7                  |      3     | 40, even spacing            |  30, even spacing            |
-|theophylline, 1_methylxanthine, 3_methylxanthine, hypoxanthine, xanthine, caffein| 1                    |      3     | 80, even spacing            |  N/A                         | 
-|theophylline, xanthine, caffein                                                  | 4                    |      3     | 40, uneven spacing          |  N/A                         | 
-|1_methylxanthine, 3_methylxanthine, hypoxanthine                                 | 1, 3, 4, 6           |      3     | 40, even spacing            |  30, even spacing            
-
 ## Protocols  ##
 
 ### A. Conda environments ###  
@@ -99,10 +90,7 @@ You can find the environment requirement files in: `../cond_envs`
 #### B.1. System set up for a single system
 Necessary files for initial system preparation can be found in `1-sys_prep` directory for each system.
 
-For conditions: {1-150KCl_Mg, 3-55NaCl_Mg, 6-55NaCl_Mg_bb, 7-55NaCl_Mg_postEq_bb} we include 2 Mg2+ ions binding to the RNA 
-(for other conditions we don't have the "0-add_Mg.tcl" step but the other step are the same):
-
-1) `0-add_Mg.tcl`: Places two Mg2+ on the RNA as described by [Gouda et al.](https://doi.org/10.1002/bip.10270)
+1) `0-add_Mg.tcl`: Places three Mg2+ on the RNA as described in the manuscript.
 
     `vmd -dispdev text -e 0-add_Mg.tcl`
 
@@ -136,14 +124,18 @@ User must open the `eq.pdb` in a visualization software such as PyMol and check 
 We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_0_or_2_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
 
 #### B.3. Adding backbone restraints ###
-For conditions, 5-55NaCl_bb, 6-55NaCl_Mg_bb, and 7-55NaCl_Mg_postEq_bb we applied backbone restraints (2 kcal/mol/A**2)
-For conditions: 5-55NaCl_bb, 6-55NaCl_Mg_bb user needs to first generate each systems and after equilibration and
-generation of files w/ BFEE, the user needs to run `run_add_bb.sh` to add restraint-specific lines in the config files.
+To set the restraints user needs to run: ` source run_bb_colvar.sh`.
 
-The condition 7-55NaCl_Mg_postEq_bb sets the restraints to the last frame of the "000_eq" equilibration, to compare
-with the condition 3-55NaCl_Mg, where we don't have the restraints. Hence 7-55NaCl_Mg_postEq_bb starts the calculations
-from after 10 ns equilibration in 3-55NaCl_Mg and only runs the steps 1 (001_MoleculeBound) and 2 (002_RestraintBound).
-To set the restraints user needs to run: `run_add_bb_postEq.sh`.
+Inspect `run_bb_colvar_add_files.sh` to make sure the right equilibrium run file is referenced (`run_1_bb_colvar_equ.sh`). 
+Check that `bb_colvars.in` is in the same directory as `equ_1/equ.0.conf` file. 
+Make sure the absolute paths in `gen_index_group_MI.tcl` are corrected.  
+Then run the following:
+`conda activate bfee`  
+`source run_bb_colvar_add_files.sh`  
+This script adds two colvar lines to `equ_1/equ.0.conf`:
+        `colvars on`
+        `colversConfig bb_colvars.in`
+
 
 ### C. Running the simulations ###
 
@@ -165,19 +157,6 @@ For all ligands and for only the condition: {1-150KCl_Mg}, we ran only the ligan
 
 Free energy calculations can be submitted to "g5.4xlarge" instances for running with NAMD.
 
-#### C.1. Testing parallel running of backward and forward calculation ####
-To test the effects of running the forward transformation in parallel with the backward, with input from `000_eq/output/eq.restart.*`
-instead of the backward's last frame, the user can run `run_bkw_frw_test.sh` to make the directories and change the config files.
-This test has been done for "6-xanthine" and "7-caffeine" in two conditions: `4-55NaCl` and `5-55NaCl_bb`.
-In these tests, only the calculations of the complex (ligand-bound) system is tested for both steps 1 and 2 (001_MoleculeBound and 002_RestraintBound).
-We found that running backward and forward calculations in parallel did not significantly affect the results.
-
-#### C.2. Benchmark ####
-For complex (RNA-small molecule) system with 40 windows (1 ns/win):
-
-    1. p3.2xlarge   1 GPU    3 CPUs      ~ 2 days, 15 hr
-    2. g5.4xlarge   1 GPU    6 CPUs      ~ 1 day,  7  hr
-
 
 ### D. Analysis ###
 
@@ -185,29 +164,7 @@ To get the free energy results from BFEE2 use:
 `conda activate bfee`  
 `python post_treatment_pandas_failed_rep.py`  
 
-#### D.1. Analysis of simulations with double sampling
-For doubling the sampling with 80 windows, change the following lines in the BFEE2 analysis scripts:    
-`vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/third_party/py_bar.py`     
-go to line 170 and change the following lines:    
-`170         for i in range(len(forward_data[0])):`   
-`171             for j in range(len(backward_data[0])):`   
-`172                 if forward_data[0][i][0] == backward_data[0][j][1] and`    
-`173                     forward_data[0][i][1] == backward_data[0][j][0]:`  
-`174                     merged_data.append((forward_data[1][i], backward_data[1][j]))`  
-`175                     break`  
-`176             else:`  
-`177                 raise RuntimeError('Error! the forward and backward files do not match!')`    
-to this:    
-`170         for i in range(len(forward_data[0])):`  
-`171             for j in range(len(backward_data[0])):`  
-`172                 if ( forward_data[0][i][0] - backward_data[0][j][1] < 1E-5) and`    
-`173                     ( forward_data[0][i][1] - backward_data[0][j][0]< 1E-5 ):`  
-`174                     merged_data.append((forward_data[1][i], backward_data[1][j]))`  
-`175                     break`  
-`176             else:`  
-`177                 raise RuntimeError('Error! the forward and backward files do not match!')`   
-
-#### D.2. Analysis of simulations with RMSD backbone restraints
+#### D.1. Analysis of simulations with RMSD backbone restraints
 For RMSD backbone restraints analysis do the following change:    
 `vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/postTreatment.py`    
 Go to line 348:    
@@ -222,20 +179,7 @@ to:
 350         else:  
 351             numCVs = 8`   
 
-#### D.3. Analysis of RNA backbone and ligand RMSD
-RMSD analysis steps:  
-Run `run_analysis.sh` in the main directory:  
-`bash run_analysis.sh`  
-For plotting each condition in a figure with subplots, run the Jupyter notebook `plot_rmsd_subplot.ipynb`, in the main directory.  
-
-#### D.4. Analysis of RNA radius of gyration
-
-Rgyr analysis steps:  
-Run `run_rgyr.sh` in the main directory:  
-`bash run_rgyr.sh`  
-For plotting each condition in a figure with subplots, run the Jupyter notebook `plot_rgyr.ipynb`, in the main directory.  
-
-#### D.5. Analysis of high occupancy sites for monovalent cations
+#### D.2. Analysis of high occupancy sites for monovalent cations
 Ion density analysis steps:  
 Run `run_ion_density.tcl` in the main directory:  
 `bash run_ion_density.tcl`  
@@ -243,30 +187,3 @@ Then go to where densities are saved:
 `cd results/ion_density_scaled`  
 and run `avg_density.tcl` to get the average densities:  
 `vmd -dispdev text -e avg_density.tcl`  
-
-#### D.6. Analysis of the distribution of monovalent cations with respect to RNA backbone
-RDF analysis steps:  
-Method 1, using VMD:  
-`cd analysis/RDF`  
-Run `VMD_RDF.tcl`  
-`vmd -dispdev text -e VMD_RDF.tcl`  
-`cd vmd_rdfs`  
-For plotting run the jupyter notebook `plot_vmd_rdf.ipynb`, in the main directory.  
-
-Method 2, using MDanalysis:  
-Run the jupyter notebook `RDF_InterRDF.ipynb` found in:  
-`cd analysis/RDF`  
-
-#### D.7. Analysis the overlap between probability distribution function of potential-energy differences  
-KL divergence analysis of the forward and backward overlaps of potential free energy (DeltaU):  
-Run `run_parsefep_du_plot.sh` in the main directory:  
-`bash run_parsefep_du_plot.sh`  
-To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main directory.  
-
-
-
-
-
-
-
-
