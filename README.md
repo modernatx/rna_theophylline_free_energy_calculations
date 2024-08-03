@@ -14,3 +14,7 @@ Mehtap Işık Bennett (mehtap.isik@modernatx.com)
 - Alan Grossfield (ORCID: 0000-0002-5877-2789)
 - Mehtap Işık Bennett (ORCID: 0000-0002-6789-952X)
 
+## Contents
+- `fe_calcs_with_0_or_2_mg/` - Directory for free energy calculations of Theophylline binding aptamer with zero or two structural Mg+2 ions
+- `fe_calcs_with_3_mg/` - Directory for free energy calculations of Theophylline binding aptamer with zero or two structural Mg+2 ions
+- `mmgbsa_calc_with_0_or_2_mg/` - Directory for MM-GBSA calculations  
