@@ -1,4 +1,4 @@
-# Free energy calculations with RNA model with zero or two Mg2+ ions
+# Free energy calculations for the RNA model with zero or two Mg2+ ions
 
 This directory contains equilibration and alchemical free energy calculations of theophylline and its analogs using BFEE2 Alchemical Route.
 Some calculations were performed in the presence of two structural Mg2+ ions and others without any.
@@ -139,28 +139,28 @@ This file also reads in the "tleap.in" to build the system.
 
     `bash 2-run_system_setup.sh`
 
-4) `3-gen_psf.py`: Generates psf file from pbd and prmtop files. The psf is not used for simulation purposes, but might be useful for visualization using VMD.
+4) `3-gen_psf.py`: Generates psf file from pbd and prmtop files. The psf is not used for simulation purposes but might be useful for visualization using VMD.
 
     `python 3-gen_psf.py`
 
 5) For the free energy calculations, the last snapshot from the 100 ns unrestrained simulation (equ_2) is first extracted and then RNA is moved to the center 
-of the box and water and ions are wrapped around it using `wrap.tcl`. There is a bash script, `run_wrap.sh`, to run this script
+of the box, and water and ions are wrapped around it using `wrap.tcl`. There is a bash script, `run_wrap.sh`, to run this script
 for all systems and replicas, found in the main directory. After running `wrap.tcl`, `ini/` directory is created in `2-sim_run/`
 and `eq.pdb` and `eq.psfare` generated in there. We use `eq.pdb` as input for generating free energy calculations using BFEE2.
-User must open the `eq.pdb` in a visualization software such as PyMol and check the structure to avoid the ligand being stretched across the periodic boundary.
+The user must open the `eq.pdb` in visualization software such as PyMol and check the structure to avoid the ligand being stretched across the periodic boundary.
 
-6) Next step is generating input files for the FEP calculations using BFEE2 GUI. After [installing BFEE2](https://github.com/fhh2626/BFEE2#installation), X11 forwarding is used to run `BFEE2Gui.py` on the AWS instance using: `ssh -X USERNAME@Instance IP Address`.
+6) The next step is generating input files for the FEP calculations using BFEE2 GUI. After [installing BFEE2](https://github.com/fhh2626/BFEE2#installation), X11 forwarding is used to run `BFEE2Gui.py` on the AWS instance using: `ssh -X USERNAME@Instance IP Address`.
 
 7) After generating the input file using BFEE2, user needs to run "run_fix_ligOnly.sh", to neutralize the ligandOnly system. 
 
 
 #### B.2. System setup for a group of systems and replicates.
 
-We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_0_or_2_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
+We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up of simulations,  we used the utility scripts provided in the `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in the main directory (`fe_calcs_with_0_or_2_mg/`). Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
 
 #### B.3. Adding backbone restraints ###
 For conditions, 5-55NaCl_bb, 6-55NaCl_Mg_bb, and 7-55NaCl_Mg_postEq_bb we applied backbone restraints (2 kcal/mol/A**2)
-For conditions: 5-55NaCl_bb, 6-55NaCl_Mg_bb user needs to first generate each systems and after equilibration and
+For conditions: 5-55NaCl_bb, 6-55NaCl_Mg_bb user needs to first generate each system and after equilibration and
 generation of files w/ BFEE, the user needs to run `run_add_bb.sh` to add restraint-specific lines in the config files.
 
 The condition 7-55NaCl_Mg_postEq_bb sets the restraints to the last frame of the "000_eq" equilibration, to compare
@@ -183,7 +183,7 @@ The user can use "p3.2xlarge" instance for these equilibration steps.
 Free energy calculations are set up using the BFEE2 tool:
 
 For the default method of FEP and TI calculations, 40 and 30 windows are chosen (1-40winCmplx_30winLig), respectively for the complex and ligand-only systems.
-In some cases we explored deviations to lambda protocol, such as doubling the lambda windows or sampling.
+In some cases, we explored deviations to lambda protocol, such as doubling the lambda windows or sampling.
 For all ligands and for only the condition: {1-150KCl_Mg}, we ran only the ligand-bound system with 80 windows (2-80winCmplx)
 
 Free energy calculations can be submitted to "g5.4xlarge" instances for running with NAMD.
@@ -231,7 +231,7 @@ to this:
 `177                 raise RuntimeError('Error! the forward and backward files do not match!')`   
 
 #### D.2. Analysis of simulations with RMSD backbone restraints
-For RMSD backbone restraints analysis do the following change:    
+For RMSD backbone restraints analysis make the following change:    
 `vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/postTreatment.py`    
 Go to line 348:    
 change the following lines:    
@@ -267,24 +267,24 @@ Then go to where densities are saved:
 and run `avg_density.tcl` to get the average densities:  
 `vmd -dispdev text -e avg_density.tcl`  
 
-#### D.6. Analysis of the distribution of monovalent cations with respect to RNA backbone
+#### D.6. Analysis of the distribution of monovalent cations relative to RNA backbone
 RDF analysis steps:  
 Method 1, using VMD:  
 `cd analysis/RDF`  
 Run `VMD_RDF.tcl`  
 `vmd -dispdev text -e VMD_RDF.tcl`  
 `cd vmd_rdfs`  
-For plotting run the jupyter notebook `plot_vmd_rdf.ipynb`, in the main directory.  
+For plotting, run the jupyter notebook `plot_vmd_rdf.ipynb` in the main directory.  
 
 Method 2, using MDanalysis:  
-Run the jupyter notebook `RDF_InterRDF.ipynb` found in:  
+Run the Jupyter notebook `RDF_InterRDF.ipynb` found in:  
 `cd analysis/RDF`  
 
 #### D.7. Analysis the overlap between probability distribution function of potential-energy differences  
 KL divergence analysis of the forward and backward overlaps of potential free energy (DeltaU):  
 Run `run_parsefep_du_plot.sh` in the main directory:  
 `bash run_parsefep_du_plot.sh`  
-To plot the the bar plot for each condition with subplots, run the jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main directory.  
+To plot the the bar plot for each condition with subplots, run the Jupyter notebook `plot_kl_hell_subplot.ipynb`, in the main directory.  
 
 
 
