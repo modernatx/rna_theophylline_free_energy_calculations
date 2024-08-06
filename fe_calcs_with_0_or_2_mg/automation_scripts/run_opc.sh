@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################################################
-## Sets up direcotires and files for OPC simulation from the TIP3P
+## Sets up directories and files for OPC simulation from the TIP3P
 ## system "3-55NaCl_Mg"
 #####################################################################
 
@@ -11,7 +11,9 @@ dir_list="2-theophylline 3-1_methylxanthine 4-3_methylxanthine 5-hypoxanthine 6-
 cond_list="3-55NaCl_Mg"
 # 6-opc_40winCmplx_30winLig
 rep_list="1-rep1 2-rep2 3-rep3"
-cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files/opc_files"
+
+#cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files/opc_files"
+cmn_dir="/home/misik/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/common_files/opc_files"
 WD=$PWD
 
 mkdir -p {2-theophylline,3-1_methylxanthine,4-3_methylxanthine,5-hypoxanthine,6-xanthine,7-caffeine}/3-55NaCl_Mg/6-opc_40winCmplx_30winLig/{1-rep1,2-rep2,3-rep3}
