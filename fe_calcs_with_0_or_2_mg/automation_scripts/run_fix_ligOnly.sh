@@ -22,7 +22,8 @@ cond_list="2-150KCl"
 rep_list="1-rep1 2-rep2 3-rep3"
 WD=$PWD
 ## set common directory path
-cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files"
+#cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/common_files"
 
 ## loop over the compounds, conditions and replicas
 ## and fix the reionize
