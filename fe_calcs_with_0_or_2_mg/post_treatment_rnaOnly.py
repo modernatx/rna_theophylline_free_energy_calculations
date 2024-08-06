@@ -9,10 +9,11 @@ import numpy as np
 import os
 import sys                 
 
+# mainDir = '/PATH/TO/MAIN/DIR'
 #mainDir = '/home/arasouli/repos/alchemical/rna_small_molecule_FE'
 mainDir = '/home/arasouli/shared/computational-sciences/misik/alchemical_fe_theophylline'
 
-## the compounds, conditions and replicas that need to be processsed
+## the compounds, conditions and replicas that need to be processed
 # cmpnd_list = [ '2-theophylline', '3-1_methylxanthine', '4-3_methylxanthine', '5-hypoxanthine', '6-xanthine', '7-caffeine' ]
 cmpnd_list = [ '8-rna_RMSD_colvar_contr' ]
 cond_list = ['2-55NaCl_0Mg/1-40win'] #cond_list = ['1-55NaCl_2Mg/1-40win']
