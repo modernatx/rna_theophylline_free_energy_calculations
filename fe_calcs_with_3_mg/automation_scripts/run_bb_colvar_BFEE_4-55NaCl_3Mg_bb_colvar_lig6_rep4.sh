@@ -11,7 +11,10 @@
 dir_list="6-xanthine"
 cond_list="4-55NaCl_3Mg_bb_colvar"
 rep_list="4-rep4"
-cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+
+#cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
+
 WD=$PWD
 
 
