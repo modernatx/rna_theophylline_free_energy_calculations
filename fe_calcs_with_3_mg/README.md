@@ -1,4 +1,4 @@
-# Free energy calculations with RNA model with three Mg2+ ions
+# Free energy calculations for the RNA model with three Mg2+ ions
 
 This directory contains equilibration and alchemical free energy calculations of theophylline and its analogs using BFEE2 Alchemical Route.
 Calculations are performed in the presence of three structural Mg2+ ions.
@@ -46,14 +46,14 @@ All free energy calculations were run as three independent replicates. Here, we 
 .	.	.                                   
 ├── 6-xanthine                                           : next system with a different ligand
 .	.	.    
-├── 8-rna_RMSD_colvar_contr            : RNA only system for calculating contributions of RNA backbone restraints
+├── 8-rna_RMSD_colvar_contr            : RNA-only system for calculating contributions of RNA backbone restraints
 ├── common_files                       : common files and script templates are kept here
 ├── automation_scripts                 : scripts for setting up a group of calculations all at once
 ├── analysis                           : analysis of free energy calculations
 │   ├── BFE_pandas                     : analysis of binding free energy predictions vs experiment
 │   │   ├── analysis.ipynb             : calculate final estimates and plot predicted vs experimental free energies
 │   ├── RDF                            : analysis of monovalent cation distribution
-├── results                            : common files and scripts templates are kept here
+├── results                            : common files and script templates are kept here
 │   ├── BFE_with_failed                : BFEE free energy results after removal of rejected replicates
 ```
 
@@ -95,34 +95,34 @@ Necessary files for initial system preparation can be found in `1-sys_prep` dire
 
     `vmd -dispdev text -e 0-add_Mg.tcl`
 
-2) `1-extract_lig_pdb_resname.tcl`: Changes resname of all ligands to "SML" (user needs to set the ligand resname as found in the pdb first).
+2) `1-extract_lig_pdb_resname.tcl`: Changes resname of all ligands to "SML" (user needs to set the ligand resname as found in the PDB first).
 Also, writes out separate pdb files for RNA and ligand.
 
     `vmd -dispdev text -e 1-extract_lig_pdb_resname.tcl`
 
-3) `2-run_system_setup.sh`: Prepares the pdb and prmtop file using Ambertools. User needs to set the ligand charge in this file.
+3) `2-run_system_setup.sh`: Prepares the p and prmtop files using Ambertools. The user needs to set the ligand charge in this file.
 This file also reads in the "tleap.in" to build the system.
 
     `bash 2-run_system_setup.sh`
 
-4) `3-gen_psf.py`: Generates psf file from pbd and prmtop files. The psf is not used for simulation purposes, but might be useful for visualization using VMD.
+4) `3-gen_psf.py`: Generates psf file from pbd and prmtop files. The psf is not used for simulation purposes but might be useful for visualization using VMD.
 
     `python 3-gen_psf.py`
 
 5) For the free energy calculations, the last snapshot from the 100 ns unrestrained simulation (equ_2) is first extracted and then RNA is moved to the center 
-of the box and water and ions are wrapped around it using `wrap.tcl`. There is a bash script, `run_wrap.sh`, to run this script
+of the box, and water and ions are wrapped around it using `wrap.tcl`. There is a bash script, `run_wrap.sh`, to run this script
 for all systems and replicas, found in the main directory. After running `wrap.tcl`, `ini/` directory is created in `2-sim_run/`
 and `eq.pdb` and `eq.psfare` generated in there. We use `eq.pdb` as input for generating free energy calculations using BFEE2.
 User must open the `eq.pdb` in a visualization software such as PyMol and check the structure to avoid the ligand being stretched across the periodic boundary.
 
-6) Next step is generating input files for the FEP calculations using BFEE2 GUI. After [installing BFEE2](https://github.com/fhh2626/BFEE2#installation), X11 forwarding is used to run `BFEE2Gui.py` on the AWS instance using: `ssh -X USERNAME@Instance IP Address`.
+6) The next step is generating input files for the FEP calculations using BFEE2 GUI. After [installing BFEE2](https://github.com/fhh2626/BFEE2#installation), X11 forwarding is used to run `BFEE2Gui.py` on the AWS instance using: `ssh -X USERNAME@Instance IP Address`.
 
 7) After generating the input file using BFEE2, user needs to run "run_fix_ligOnly.sh", to neutralize the ligandOnly system. 
 
 
 #### B.2. System setup for a group of systems and replicates.
 
-We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in `fe_calcs_with_3_mg/`. Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
+We had to deal with a large number of systems to set up for each condition considering six ligands and three replicates each. To make file manipulation easier and parallel set up we used the utility scripts provided in `automation_scripts/` directory. Please note that these scripts were collected in this directory for tidiness. Their original location for execution is one folder up in the main directory (`fe_calcs_with_3_mg/`). Before using them please remember to copy them one directory up to ensure the relative paths in the scripts function correctly.
 
 #### B.3. Adding backbone restraints ###
 To set the restraints user needs to run: ` source run_bb_colvar.sh`.
@@ -153,7 +153,7 @@ The user can use "p3.2xlarge" instance for these equilibration steps.
 Free energy calculations are set up using the BFEE2 tool:
 
 For the default method of FEP and TI calculations, 40 and 30 windows are chosen (1-40winCmplx_30winLig), respectively for the complex and ligand-only systems.
-In some cases we explored deviations to lambda protocol, such as doubling the lambda windows or sampling.
+In some cases, we explored deviations to lambda protocol, such as doubling the lambda windows or sampling.
 For all ligands and for only the condition: {1-150KCl_Mg}, we ran only the ligand-bound system with 80 windows (2-80winCmplx)
 
 Free energy calculations can be submitted to "g5.4xlarge" instances for running with NAMD.
@@ -166,7 +166,7 @@ To get the free energy results from BFEE2 use:
 `python post_treatment_pandas_failed_rep.py`  
 
 #### D.1. Analysis of simulations with RMSD backbone restraints
-For RMSD backbone restraints analysis do the following change:    
+For RMSD backbone restraints analysis make the following change:    
 `vi /opt/install/conda/envs/bfee/lib/python3.11/site-packages/BFEE2/postTreatment.py`    
 Go to line 348:    
 change the following lines:    
