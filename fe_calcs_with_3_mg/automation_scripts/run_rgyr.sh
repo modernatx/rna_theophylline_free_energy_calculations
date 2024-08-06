@@ -12,8 +12,10 @@ cond_list=" 1-55NaCl_3Mg "
 win_list="1-40winCmplx_30winLig "
 rep_list="1-rep1 2-rep2 3-rep3"
 WD=$PWD
+
 ## set common_files directory path
-cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+#cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
 
 ## loop over the compounds, conditions and replicas
 ## and setup the directories and run rmsd.tcl
