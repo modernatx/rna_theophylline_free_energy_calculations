@@ -11,7 +11,10 @@
 dir_list="2-theophylline 3-1_methylxanthine 4-3_methylxanthine 5-hypoxanthine 6-xanthine 7-caffeine"
 cond_list="4-55NaCl_3Mg_bb_colvar"
 rep_list="1-rep1 2-rep2 3-rep3"
-cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+
+#cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
+
 WD=$PWD
 
 mkdir -p {2-theophylline,3-1_methylxanthine,4-3_methylxanthine,5-hypoxanthine,6-xanthine,7-caffeine}/4-55NaCl_3Mg_bb_colvar/1-40winCmplx_30winLig/{1-rep1,2-rep2,3-rep3}
