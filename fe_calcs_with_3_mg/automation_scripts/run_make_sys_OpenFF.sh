@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################################################
-## make directories for OpenFF simulations with 55 mM NaCl and 3 Mg.
+## Make directories for OpenFF simulations with 55 mM NaCl and 3 Mg.
 #####################################################################
 
 ## set the list of compounds (dir_list), conditions (cond_list),
@@ -9,7 +9,10 @@
 dir_list="2-theophylline 3-1_methylxanthine 4-3_methylxanthine 5-hypoxanthine 6-xanthine 7-caffeine"
 cond_list="1-55NaCl_3Mg"
 rep_list="1-rep1 2-rep2 3-rep3"
-cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+
+#cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
+
 WD=$PWD
 
 
