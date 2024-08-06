@@ -13,7 +13,9 @@
 dir_list="2-theophylline"
 cond_list="4-55NaCl_3Mg_bb_colvar"
 rep_list="1-rep1 2-rep2 3-rep3"
-cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+
+#cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
 WD=$PWD
 
 
