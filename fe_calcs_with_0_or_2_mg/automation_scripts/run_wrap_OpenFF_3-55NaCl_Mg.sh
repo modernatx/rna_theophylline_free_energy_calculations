@@ -14,9 +14,11 @@
 dir_list="2-theophylline 3-1_methylxanthine 4-3_methylxanthine 5-hypoxanthine 6-xanthine 7-caffeine"
 cond_list="3-55NaCl_Mg/2-OpenFF_40winCmplx_30winLig"
 rep_list="1-rep1 2-rep2 3-rep3"
+
 ## set common directory path
 #cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files"
-cmn_dir="/home/misik/repos/alchemical_fe_theophylline/common_files"
+#cmn_dir="/home/misik/repos/alchemical_fe_theophylline/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/common_files"
 
 ## loop over the compounds, conditions and replicas and wrap
 ## vmd needs to be installed and its path needs to be added to $PATH
