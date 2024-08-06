@@ -25,9 +25,15 @@ for val1 in $dir_list; do
             cp -r ../../../4-55NaCl/1-40winCmplx_30winLig/${val3}/0-starting_PDB/ .
             cp -r ../../../4-55NaCl/1-40winCmplx_30winLig/${val3}/1-sys_prep/ .
             mkdir -p ./2-sim_run/{equ_0,equ_1,restraints}
-            cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_0/*conf ./2-sim_run/equ_0
-           cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_1/*conf ./2-sim_run/equ_1
-           cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/restraints/*tcl ./2-sim_run/restraints
+            
+            #cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_0/*conf ./2-sim_run/equ_0
+            #cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_1/*conf ./2-sim_run/equ_1
+            #cp /home/arasouli/repos/alchemical/rna_small_molecule_FE/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/restraints/*tcl ./2-sim_run/restraints
+
+            cp /home/misik/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_0/*conf ./2-sim_run/equ_0
+            cp /home/misik/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/equ_1/*conf ./2-sim_run/equ_1
+            cp /home/misik/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/2-theophylline/5-55NaCl_bb/1-40winCmplx_30winLig/1-rep1/2-sim_run/restraints/*tcl ./2-sim_run/restraints
+            
             cd ../
         done
         cd ../../
