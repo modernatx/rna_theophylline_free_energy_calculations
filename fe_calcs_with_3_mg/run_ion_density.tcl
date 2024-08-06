@@ -32,7 +32,9 @@ foreach val1 $dir_list {
 		# volmap density [atomselect top "type KP"] -res 0.5 -weight mass -allframes -combine avg -o /home/arasouli/repos/alchemical/rna_small_molecule_FE/results/ion_density/${val1}_${val2}.dx
         set sel [atomselect top "type NAPLTU"]
         $sel set radius 1
-        volmap density $sel -res 0.5 -allframes -combine avg -o /home/arasouli/repos/alchemical/rna_small_molecule_FE/results/ion_density_scaled/${val1}_${val2}.dx
+        
+	#volmap density $sel -res 0.5 -allframes -combine avg -o /home/arasouli/repos/alchemical/rna_small_molecule_FE/results/ion_density_scaled/${val1}_${val2}.dx
+ 	volmap density $sel -res 0.5 -allframes -combine avg -o /home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/results/ion_density_scaled/${val1}_${val2}.dx
 		mol delete all
 	}
 	cd ../../../
