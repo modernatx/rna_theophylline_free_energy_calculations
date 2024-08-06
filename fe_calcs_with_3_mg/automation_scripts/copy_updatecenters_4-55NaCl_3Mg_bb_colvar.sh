@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script places the missing 000.3_updateCenters.py in BFEE2 subdirectory
-# and deletes the log and ouput files of the failed BFEE2 runs
+# and deletes the log and output files of the failed BFEE2 runs
 
 ## set the list of compounds (dir_list), conditions (cond_list),
 ## and replicas (rep_list) that need to be fixed
@@ -12,7 +12,8 @@ WD=$PWD
 
 ## set common directory path
 #cmn_dir="/home/arasouli/repos/alchemical/3_mg_rna_small_molecule_FE/common_files"
-cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+#cmn_dir="/home/misik/repos/3_mg_rna_small_molecule_fe/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_3_mg/common_files"
 
 cd $WD
 
