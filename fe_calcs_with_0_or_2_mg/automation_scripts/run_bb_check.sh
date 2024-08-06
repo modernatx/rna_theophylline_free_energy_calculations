@@ -11,7 +11,10 @@
 dir_list="2-theophylline 3-1_methylxanthine 4-3_methylxanthine 5-hypoxanthine 6-xanthine 7-caffeine"
 cond_list="8-5NaCl_Mg_bb_colvar 9-5NaCl_bb_colvar"
 rep_list="1-rep1 2-rep2 3-rep3"
-cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files"
+
+# cmn_dir="/home/arasouli/repos/alchemical/rna_small_molecule_FE/common_files"
+cmn_dir="/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg/common_files"
+
 WD=$PWD
 
 
