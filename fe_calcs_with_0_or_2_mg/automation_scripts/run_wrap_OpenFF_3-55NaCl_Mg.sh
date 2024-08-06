@@ -5,7 +5,7 @@
 ## and saves a pdb and psf in "ini" directory.                     ##
 ## WARNING: make sure to open                                      ##
 ## the saved files and check if the ligand has been properly       ##
-## wrapped. If ligand is streched across the periodic boundry, the ##
+## wrapped. If ligand is stretched across the periodic boundary, the ##
 ## calculations will be faulty.                                    ##
 #####################################################################
 
