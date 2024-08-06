@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #####################################################################
-## This script makes directoris and runs RMSD analysis.            ##
+## This script makes directories and runs RMSD analysis.            ##
 #####################################################################
 
 
