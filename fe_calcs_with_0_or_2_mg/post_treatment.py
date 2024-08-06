@@ -25,7 +25,7 @@ def read_colvar(filePath):
     
     return np.array([eulerTheta, polarTheta,r])
                 
-## Path in which all the contains all the simulations
+## Path which contains all the simulations
 # mainDir = '/PATH/TO/MAIN/DIR'
 # mainDir = '/home/arasouli/repos/alchemical/rna_small_molecule_FE'
 mainDir = '/home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg'
