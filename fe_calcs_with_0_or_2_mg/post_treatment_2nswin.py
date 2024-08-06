@@ -20,8 +20,10 @@ def read_colvar(filePath):
     
     return np.array([eulerTheta, polarTheta,r])
                 
-
-mainDir = '/home/arasouli/repos/alchemical/rna_small_molecule_FE'
+## Path in which all the contains all the simulations
+# mainDir = '/PATH/TO/MAIN/DIR'
+# mainDir = '/home/arasouli/repos/alchemical/rna_small_molecule_FE'
+mainDir = 'home/misik/repos/rna_theophylline_free_energy_calculations/fe_calcs_with_0_or_2_mg'
 
 cmpnd_list = [ '2-theophylline', '3-1_methylxanthine', '4-3_methylxanthine', '5-hypoxanthine', '6-xanthine', '7-caffeine' ]
 # cond_list_fep = ['4-55NaCl/1-40winCmplx_30winLig']
