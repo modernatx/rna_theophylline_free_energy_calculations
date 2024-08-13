@@ -18,3 +18,4 @@ Mehtap Işık Bennett (mehtap.isik@modernatx.com)
 - `fe_calcs_with_0_or_2_mg/` - Directory for free energy calculations of Theophylline binding aptamer with zero or two structural Mg+2 ions
 - `fe_calcs_with_3_mg/` - Directory for free energy calculations of Theophylline binding aptamer with zero or two structural Mg+2 ions
 - `mmgbsa_calc_with_0_or_2_mg/` - Directory for MM-GBSA calculations  
+- `ligands/` - Directory for SDF files of Theopylline analogs  
