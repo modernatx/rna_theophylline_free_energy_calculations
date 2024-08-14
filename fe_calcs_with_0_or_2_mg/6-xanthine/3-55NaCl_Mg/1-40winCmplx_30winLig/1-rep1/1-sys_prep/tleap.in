@@ -31,7 +31,7 @@ solvatebox mybox TIP3PBOX {0 0 0}
 # Add ions to neutralize the system
 addions mybox Na+ 0
 
-# Add KCl to achieve 150 mM salt concentration (Requires 90 K+ and 90 Cl- ions)
+# Add 55 mM NaCl
 addionsRand mybox Na+ 9
 addionsRand mybox Cl- 9
 
