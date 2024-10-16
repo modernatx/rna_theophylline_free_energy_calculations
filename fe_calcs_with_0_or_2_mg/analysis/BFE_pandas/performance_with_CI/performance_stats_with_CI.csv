@@ -1,0 +1,2 @@
+,name,MAE,MAE_lower_bound,MAE_upper_bound,RMSE,RMSE_lower_bound,RMSE_upper_bound,pearsons_r,pearsons_r_lower_bound,pearsons_r_upper_bound,kendall_tau,kendall_tau_lower_bound,kendall_tau_upper_bound,spearmans_rho,spearmans_rho_lower_bound,spearmans_rho_upper_bound
+0,55_NaCl_0Mg_TP3_GAF_40_1ns_unres,1.4220984889444666,0.40992594576600944,2.6640546238144025,1.9818669722611426,0.8417924421523019,2.9466918095080255,0.7602795001932169,0.3111373512607666,0.999967673044637,0.4666666666666666,-0.16666666666666669,1.0,0.6571428571428573,-0.22580645161290325,1.0

@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[a4paper,margin=0.005in,tmargin=0.5in,lmargin=0.5in,rmargin=0.5in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\pagenumbering{gobble}
+\begin{document}
+\begin{center}
+\scriptsize
+\begin{longtable}{|ccccccccc|}
+\toprule
+ID & name & MAE & RMSE & Pearson's r & $\tau$ & Spearman's Rho \\
+\midrule
+\endfirsthead
+\toprule
+ID & name & MAE & RMSE & Pearson's r & $\tau$ & Spearman's Rho \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{Continued on next page} \\
+\midrule
+\endfoot
+\bottomrule
+\endlastfoot
+1 & 55\_NaCl\_0Mg\_TP3\_GAF\_40\_1ns\_unres & 1.42 [0.41, 2.66] & 1.98 [0.84, 2.95] & 0.76 [0.31, 1.00] & 0.47 [-0.17, 1.00] & 0.66 [-0.23, 1.00] \\
+\end{longtable}
+\end{center}
+
+Notes
+
+- Mean and 95\% confidence intervals of performance statistics were calculated by bootstrapping with 1000 samples.
+
+\end{document}
